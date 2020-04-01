@@ -1,14 +1,1928 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<!--[if IE 9]>         <html lang="ru" class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="ru" class="no-js"> <!--<![endif]-->
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+<script>
+    (function () {
+        if (!window.getFeatureFlags) {
+            const featureToggles = {"newsearch":true,"newlogin":true,"newcart":true,"newproduct":true,"-tab-slot":true,"-tab-slot-from-cookie":true};
+
+            window.getFeatureFlags = function () {
+                return featureToggles;
+            };
+        }
+    })();
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"cabb5a154f",applicationID:"419670997"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+<title>Mohito - лучший магазин модной женской одежды | купите онлайн</title>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/base/default/lib/lpp-common/src/functions/polyfills/narch.js"></script>
+<meta name="description" content="Купите модную одежду и аксессуары онлайн в Mohito! Новые поступления каждый день. Выбирайте женственный стиль, сделайте покупки не выходя из дома!" />
+<meta name="keywords" content="платья, комбинезоны, рубашки, куртки, пальто, брюки, джинсы, блузки, свитеры, кардиганы, футболки, юбки, пиджаки, топы, белье, ночное белье, шорты, сумки, кошельки, обувь, украшения, ремни, аксессуары, шарфы, шляпы, шапки">
+<link rel="icon" href="https://www.mohito.com/ru/ru/skin/frontend/mohito/default/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://www.mohito.com/ru/ru/skin/frontend/mohito/default/favicon.ico" type="image/x-icon">
+<script type="text/javascript">
+        (function(global) {
+
+            var rules = {"customer_password_hash":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"Password*","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":6,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Password"},"customer_website_id":{"frontend_input":"select","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Associate to Website"},"customer_gender":{"frontend_input":"select","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"Обязательные поля","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Gender"},"customer_created_in":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Created From"},"customer_group_id":{"frontend_input":"select","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Group"},"customer_disable_auto_group_change":{"frontend_input":"boolean","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Disable Automatic Group Change Based on VAT ID"},"customer_firstname":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":"^[-a-zA-ZąłńćśźżóęŚÓŁŃĆĘŹŻĄüöäÜÖÄßáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäĺľôŕÄĹĽÔŔāēģīķļņŗūĀĒĢĪĶĻŅŖŪąęėįųĄĘĖĮŲõöüÕÖÜćđĆĐăâîşţĂÂÎŞŢãőűÃŐŰабвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯȘșȚțæøåÆØÅҐґЄєІіЇї\\.' ]+$","input_mask":null,"placeholder_translation_key":"","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":2,"max_text_length":30,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"First Name"},"customer_lastname":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":"^[-a-zA-ZąłńćśźżóęŚÓŁŃĆĘŹŻĄüöäÜÖÄßáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäĺľôŕÄĹĽÔŔāēģīķļņŗūĀĒĢĪĶĻŅŖŪąęėįųĄĘĖĮŲõöüÕÖÜćđĆĐăâîşţĂÂÎŞŢãőűÃŐŰабвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯȘșȚțæøåÆØÅҐґЄєІіЇї\\.' ]+$","input_mask":null,"placeholder_translation_key":"Фамилия","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":2,"max_text_length":35,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Last Name"},"customer_email":{"frontend_input":"text","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":"^[a-zA-Z0-9\\.\\-_]+@([a-zA-Z0-9-_]+\\.)+[a-zA-Z]{2,6}$","input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"Please enter proper email address","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Email"},"customer_dob":{"frontend_input":"date","frontend_class":null,"is_required":false,"input_filter":"date","pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Date Of Birth"},"customer_phone_number":{"frontend_input":"text","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":"^\\d+$","input_mask":null,"placeholder_translation_key":"Номер телефона","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":5,"max_text_length":10,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Telephone"},"customer_salesmanago_contact_id":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"SALESmanago Contact ID"},"customer_address_firstname":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":"^[-a-zA-ZąłńćśźżóęŚÓŁŃĆĘŹŻĄüöäÜÖÄßáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäĺľôŕÄĹĽÔŔāēģīķļņŗūĀĒĢĪĶĻŅŖŪąęėįųĄĘĖĮŲõöüÕÖÜćđĆĐăâîşţĂÂÎŞŢãőűÃŐŰабвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯȘșȚțæøåÆØÅҐґЄєІіЇї\\.' ]+$","input_mask":null,"placeholder_translation_key":"","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":2,"max_text_length":30,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"First Name"},"customer_address_lastname":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":"^[-a-zA-ZąłńćśźżóęŚÓŁŃĆĘŹŻĄüöäÜÖÄßáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäĺľôŕÄĹĽÔŔāēģīķļņŗūĀĒĢĪĶĻŅŖŪąęėįųĄĘĖĮŲõöüÕÖÜćđĆĐăâîşţĂÂÎŞŢãőűÃŐŰабвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯȘșȚțæøåÆØÅҐґЄєІіЇї\\.' ]+$","input_mask":null,"placeholder_translation_key":"Фамилия","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":2,"max_text_length":35,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Last Name"},"customer_address_company":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":"^[0-9-\\\/a-zA-ZąłńćśźżóęŚÓŁŃĆĘŹŻĄüöäÜÖÄßáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäĺľôŕÄĹĽÔŔāēģīķļņŗūĀĒĢĪĶĻŅŖŪąęėįųĄĘĖĮŲõöüÕÖÜćđĆĐăâîşţĂÂÎŞŢãőűÃŐŰабвгдежзийклмнопрстуфхцчшщъыьэюяіАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯȘșȚțæøåÆØÅҐґЄєІіЇї\\.'& ]+$","input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":0,"max_text_length":80,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Company"},"customer_address_street":{"frontend_input":"multiline","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":"^[a-zA-Z0-9-\\\/абвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ№«»ёЁ\\|\\.\\ \\,\\(\\)'\\\"́ ]+$","input_mask":null,"placeholder_translation_key":"street name*","validation_key_min":"","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":0,"max_text_length":35,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Street Address"},"customer_address_city":{"frontend_input":"text","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":"^[a-zA-Z0-9-\\\/абвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯȘșȚț№«»ёЁ\\|\\.\\ \\,\\(\\)́ '\\\"]+$","input_mask":null,"placeholder_translation_key":"town*","validation_key_min":"","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":0,"max_text_length":35,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"City"},"customer_address_country_id":{"frontend_input":"select","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Country"},"customer_address_region":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"State\/Province"},"customer_address_region_id":{"frontend_input":"hidden","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"State\/Province"},"customer_address_postcode":{"frontend_input":"text","frontend_class":null,"is_required":true,"input_filter":null,"pattern_validation":"^\\d{6}$","input_mask":null,"placeholder_translation_key":"Zip code*","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Zip\/Postal Code"},"customer_address_telephone":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":"^\\d+$","input_mask":null,"placeholder_translation_key":"Номер телефона","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":5,"max_text_length":10,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Telephone"},"customer_address_fax":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Fax"},"customer_address_vat_id":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"VAT number"},"customer_address_pesel":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":11,"max_text_length":11,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"pesel"},"customer_address_vatin":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":"[0-9]{10}","input_mask":null,"placeholder_translation_key":"VATIN*","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"vatin"},"customer_address_is_private":{"frontend_input":"select","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Is private address?"},"customer_address_inv_private":{"frontend_input":"select","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Is invoice for private person?"},"customer_address_additional_information":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":"^[0-9\\-\\\/a-zA-ZąłńćśźżóęŚÓŁŃĆĘŹŻĄüöäÜÖÄßáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäĺľôŕÄĹĽÔŔāēģīķļņŗūĀĒĢĪĶĻŅŖŪąęėįųĄĘĖĮŲõöüÕÖÜćđĆĐăâîşţĂÂÎŞŢãőűÃŐŰабвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯȘșȚț№«»ёЁ#\\+\\.\\&\\ \\,\\(\\)\\?\\!\\;'\\@%\\_\\n\\:]*$","input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":0,"max_text_length":35,"class_name":null,"required_on_checkout":false,"is_visible":true,"label":"Additional address information"},"customer_address_regon":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"Точные символы","validation_key_max":"Точные символы","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":1,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"REGON"},"customer_address_vatdph":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"Минимум {0} символов","validation_key_max":"Макс. {0} Знаков","validation_key_required":"Обязательные поля","validation_key_illegal":"Пожалуйста, введите допустимые символы","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"VAT DPH"},"customer_address_full_address":{"frontend_input":"text","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"required_on_checkout":true,"is_visible":true,"label":"Full address"},"rma_item_resolution":{"frontend_input":"select","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"is_visible":false,"label":"Разрешение"},"rma_item_reason":{"frontend_input":"select","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"is_visible":true,"label":"Reason to Return"},"rma_item_complaint_reason":{"frontend_input":"select","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"is_visible":true,"label":"Решение по возврату"},"rma_item_reason_other":{"frontend_input":"textarea","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"is_visible":true,"label":"Other"},"rma_item_date_of_defect":{"frontend_input":"date","frontend_class":null,"is_required":false,"input_filter":null,"pattern_validation":null,"input_mask":null,"placeholder_translation_key":"","validation_key_min":"","validation_key_max":"","validation_key_required":"","validation_key_illegal":"","validation_key_specyfic":"","min_text_length":0,"max_text_length":0,"class_name":null,"is_visible":true,"label":"Date of the defect"}};
+
+            // custom rules
+            rules['customer_multiemail'] = {
+                is_required: true,
+                multiemail: true
+            };
+            rules['customer_email_exist'] = {
+                is_required: true,
+                email_exist: true,
+                email: true
+            };
+            rules['customer_username'] = {
+                is_required: true,
+                pattern_validation: '[a-zA-Z0-9_.-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}'
+            };
+            rules['customer_address_dialcode'] = {
+                is_required: true,
+                pattern_validation: /^(\+(\d{1,3}))$/,
+                max_text_length: 4
+            };
+            rules['customer_dialcode_optional'] = {
+                is_required: false,
+                pattern_validation: /^(\+(\d{1,3}))$/,
+                max_text_length: 4
+            };
+            rules['customer_street_nb'] = {
+                is_required: true,
+                pattern_validation: '^$|[0-9-\/a-zA-ZąłńćśźżóęŚÓŁŃĆĘŹŻĄüöäÜÖÄßáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäĺľôŕÄĹĽÔŔāēģīķļņŗūĀĒĢĪĶĻŅŖŪąęėįųĄĘĖĮŲõöüÕÖÜćđĆĐăâîşţĂÂÎŞŢãőűÃŐŰабвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯȘșȚț\.#\,’\'\(\)́  ]+$',
+                max_text_length: 40,
+                validation_key_illegal: 'Пожалуйста, введите допустимые символы',
+                validation_key_max: 'Макс. {0} Знаков',
+                validation_key_min: 'Минимум {0} символов',
+                validation_key_required: 'Это поле обязательно'
+            };
+            rules['customer_company'] = {
+                is_required: true,
+                min_text_length: 1,
+                max_text_length: 100
+            };
+            rules['store'] = {
+                is_required: true
+            };
+            rules['text_optional'] = {
+                is_required: false,
+                pattern_validation: /^.*$/
+            };
+            rules['rma_courier_pickup_date'] = {
+                is_required: true
+            };
+            rules['rma_bank'] = {
+                min_text_length: 32,
+                pattern_validation: /\d{2}( ?\d{4}){6}/,
+                is_required: true,
+                is_bank_account_number_valid: true
+            };
+            rules['customer_password_hash_confirmation'] = {
+                is_required: true,
+                equal_to: '.reset-forgotten-password input[name=password]'
+            };
+            rules['customer_contact_form_select'] = {
+                is_required: true,
+                validation_key_required: 'Обязательные поля'
+            };
+
+            
+            // read-only, co by nikt nie modyfikował :)
+            global['getValidationRules'] = function() {
+                return rules;
+            }
+        })(window);
+    </script>
+<script>
+    //<![CDATA[
+    var global = {
+        languageCode: 'ru_RU',
+        'i18n': {
+                            'popup_cookie_name': 're_dcm',
+                'popup_cookie_message': '<p>Мы используем информацию,  зарегистрированную в файлах \"cookies\", в частности, в рекламных и статистических целях, а также для того, чтобы адаптировать наши сайты к индивидуальным потребностям Пользователей. \n\nВы можете изменить настройки касающиеся \"cookies\" в вашем браузере. Если вы оставите эти настройки без изменений, cookie-файлы будут сохранены в памяти устройства. \n\nИзменение настроек файлов \"cookie\" может ограничить функциональность сайта.</p>',
+                        'currency': 'RUB',
+            'amount': 'сумма',
+            'confirm_1' : 'Да',
+            'confirm_0' : 'Нет',
+            'basket_preview': 'Просмотр корзины',
+            'form_required' : 'Required Field',
+            'form_thankyou' : 'Благодарим',
+            'color' : 'Цвет',
+            'size' : 'Размер',
+            'size_table': 'Информация о размерах',
+            'add_to_wishlist': 'add to wishlist',
+            'add_to_basket': 'Add to Cart',
+            'go_to_product_page': 'Перейти к странице с товарами',
+            'back_to_product': 'Back To Product',
+            'show_on_map' : 'Посмотреть на карте',
+            'avv_1' : 'Низкая доступность',
+            'avv_2' : 'Cредняя доступность',
+            'avv_3' : 'Высокая доступность',
+            'check_availability' : 'Наличие в вашем регионе',
+            'geolocalization' : 'Определить место положения',
+            'empty_basket ' : 'Shopping cart is empty',
+            'move_to_wishlist' : 'move to wishlist',
+            'remove' : 'remove',
+            'discount' : 'скидка',
+            'basket_max' : 'Максимальное количество товаров',
+            'basket_min' : 'Минимальное количество товаров',
+            'general_error': 'Произошла техническая ошибка',
+            'select_size': 'Выберите размер',
+            'select_text_helper': 'Необходимо выбрать опцию',
+            'select_text_error': 'Вы не выбрали вариант.',
+            'geolocation_disabled': 'Ваш браузер не обслуживает данную геолокацию',
+            'geolocation_enabled_error': 'Ваш браузер не может определить ваше местоположение',
+            'yes': 'Да',
+            'no': 'Нет',
+            'ph': 'Тел.',
+            'please_remove_unavailable_products': 'Перед оформлением заказа, пожалуйста, удалите из корзины недоступные продукты.',
+            'cart_choose_size': 'Прежде чем добавить товар в корзину, пожалуйста, выберите его размер',
+            'wishlist_choose_size': 'Прежде чем добавить в избранное, пожалуйста, выберите размер',
+            'availability_choose_size': 'Прежде чем проверить наличие продукта, пожалуйста, выберите его размер',
+            'cart_qty_too_big': 'Большее количество единиц этого продукта в данный момент недоступно.',
+            'clear': 'Очистить',
+            'close': 'Закрыть',
+            'delivery_type': 'Choose shipping/payment method',
+            'pickpoint': 'Выберите магазин',
+            'regulations_required': 'Принятие правил является обязательным',
+            'prev': 'Предыдущий',
+            'next': 'следующий',
+            'today': 'сегодня',
+            'january': 'Январь',
+            'february': 'Февраль',
+            'march': 'Март',
+            'april': 'Апрель',
+            'may': 'Май',
+            'june': 'Июнь',
+            'july': 'Июль',
+            'august': 'Авгуcт',
+            'september': 'сентябрь',
+            'october': 'Октябрь',
+            'november': 'Ноябрь',
+            'december': 'Декабрь',
+            'jan': 'Янв',
+            'feb': 'Фев',
+            'mar': 'Мар',
+            'apr': 'Апр',
+            'ma': 'Май',
+            'jun': 'Июн',
+            'jul': 'Июл',
+            'aug': 'Авг',
+            'sep': 'сен',
+            'oct': 'Окт',
+            'nov': 'Ноя',
+            'dec': 'Дек',
+            'monday': 'Понедельник',
+            'tuesday': 'Вторник',
+            'wednesday': 'среда',
+            'thursday': 'Четверг',
+            'friday': 'Пятница',
+            'saturday': 'суббота',
+            'sunday': 'Воскресенье',
+            'mon': 'Пон',
+            'tue': 'Вто',
+            'wed': 'сре',
+            'thu': 'Чет',
+            'fri': 'Пят',
+            'sat': 'суб',
+            'sun': 'Вос',
+            'week': 'Неделя',
+            'validation_required': 'Обязательные поля',
+            'validation_required_select': 'Выберите один из вариантов',
+            'validation_email': 'Неверный адрес электронной почты',
+            'validation_url': 'Неверный URL',
+            'validation_date': 'Date in DD{0}MM{0}YYYY format',
+            'validation_date_iso': 'Неверная дата (ISO)',
+            'validation_number': 'Неверное число',
+            'validation_digits': 'Неверный ряд цифр ',
+            'validation_equals_to': 'Разные значения',
+            'validation_maxlength': 'Макс. {0} символов',
+            'validation_minlength': 'Мин. {0} символов',
+            'validation_length': 'Ровно {0} символов',
+            'validation_zip': 'Правильный формат: XX-XXX',
+            'validation_emails': 'Неверные адреса электронной почты',
+            'validation_phone': 'Неверный номер',
+            'validation_maxbytes': 'слишком длинное значение',
+            'validation_before_today': 'Требуется более ранняя дата',
+            'validation_before_tomorrow': 'Today or past date required',
+            'validation_iban': 'Invalid IBAN',
+            'validation_min_date': 'Please enter exact date or later than',
+            'validation_max_date': 'Please enter today date or earlier than',
+            'invalid_data': 'Неверные данные',
+            'above_conditions': 'Принятие выше приведенных условий является обязательным',
+            'query_for_order': 'Запрос на заказ',
+            'more': 'Больше',
+            'less': 'Меньше',
+            'You have to choose one or more items': 'Необходмо выбрать одну или более вещей',
+            'Write some cause details in comment field': 'Write some cause details in comment field',
+            'quickcart': 'Быстро в корзину',
+            'Write some cause details': 'Write some cause details',
+            'Product': 'Товар',
+            'validation_bank_invalid': 'Invalid account number',
+            'validation_bank_unknown': 'Unknown bank',
+            'validation_bank_bik_invalid': 'Неверное значение: номер БИК или номер банковского счета',
+            'validation_bank_account_invalid': 'Неверное значение: номер банковского счета или номер БИК',
+            'validation_is_adult': 'You need to be at least {1}. Enter correct date',
+            'no_postcode_in_database': 'К сожалению , ваш почтовый индекс не найден в нашей базе данных. Проверьте его правильность. Неверный индекс может увеличить сроки доставки. Вы уверены, что хотите оформить заказ?',
+            'order_is_processed': 'Ваш заказ обрабатывается. Пожалуйста, подождите...',
+            'Cart': 'Корзина',
+            'Recently added products': 'Недавно добавленные товары',
+            'Sum': 'сумма',
+            'Go checkout': 'Оформить заказ',
+            'Free pickpoint': 'Бесплатная доставка от 2000 РУБ.',
+            'cart_no_items': '<p>В вашей корзине нет товаров&nbsp;</p>',
+            'Order with obligation to pay': 'Order with obligation to pay',
+            'Order with obligation to pay by PayPAL': 'Order with obligation to pay by PayPAL',
+            'Order with obligation to pay by card': 'Order with obligation to pay by card',
+            'input_paste_disable': 'You can not paste value to this field',
+            'different_emails': 'Адреса Email не совпадают',
+            'clear_filters': 'Очистить фильтр',
+            'filter': 'Фильтр',
+            'price_range': 'Price min. limit should be lower than max. limit',
+            'no_products_found': 'Нет товаров, соответствующих критериям',
+            'card_number': 'Номер карты',
+            'Invalid_PAN': 'Номер карты не указан либо введен некорректно',
+            'Card_number_did_not_pass_luhn_validation': 'Неправильный номер карты',
+            'Invalid_expiration_date': 'Неправильно указан срок действия карты',
+            'expiration_date_have_passed': 'Указанный срок действия карты уже истек',
+            'Missing_required_parameters': 'Не указаны необходимые параметры',
+            'holder_name_field_is_mandatory': 'Не указано Имя и Фамилия',
+            'One_or_more_request_parameters_are_invalid.': 'Один или несколько необходимых параметров указаны неверно',
+            'credit_card_cvv_should_be_3-4_digits_in_string_format.': 'Credit card cvv should be 3 digits in string format.',
+            'Credit_card_verification': 'Проверка карты',
+            'Recommended': 'РЕКОМЕНДУЕМ',
+            'filters': 'Фильтры',
+            'sort': 'Сортировать',
+            'coupon_remove': 'Удалить',
+            'validation_vatin_invalid': 'Invalid vatin number',
+            'Do You have coupon code?': 'У вас есть промокод?',
+            'Checkout': 'Оформить заказ',
+            'For free shipping courier is missing': 'для бесплатной доставки вам не хватает',
+            'Free delivery by courier': 'Бесплатная доставка на дом',
+            'OK': 'OK',
+            'Basket value': 'сумма',
+            'Back to shop': 'Вернуться в магазин',
+            'Do not hesitate to purchase, add items to the cart does not mean their reservation - mohito': 'Добавление товаров в корзину не означает их бронирования',
+            'Continue Shopping': 'Продолжить покупки',
+            'Updating basket': 'Updating basket',
+            'view': 'Вид',
+            'View': 'Вид',
+            'something_went_wrong': 'Something went wrong, please refresh the page',
+            'products_quantity': 'Всего товаров',
+            'products': 'Товары',
+            'Composition': 'состав',
+            'Size': 'Размер',
+            'Add to cart': 'Добавить в корзину',
+            'sizing': 'Таблица размеров',
+            'Product is unavailable online. Check it to get notification about availability.': 'Товар недоступен онлайн. Подписаться на уведомление о наличии.',
+            'Notify when available': 'Уведомить о наличии',
+            'composition_main_fabric': 'Внешняя сторона',
+            'composition_padding_1': 'Подкладка',
+            'composition_padding_2': 'Набивка',
+            'shoes_composition_main_fabric': 'Материал I',
+            'shoes_composition_padding_1': 'Материал II',
+            'shoes_composition_padding_2': 'Материал III',
+            'Check availability': 'Проверить наличие',
+            'Close': 'Закрыть',
+            'Product unavailable': 'Товар недоступен',
+            'Go to cart': 'В корзину',
+            'Shipping': 'Доставка',
+            'Shipping policy': 'Правила доставки',
+            'Returns': 'Возвраты',
+            'Returns policy': 'Возврат товара',
+            'Product sold out': 'Товар распродан',
+            'This field is required': 'Обязательные поля',
+            'Invalid e-mail address': 'Неверный адрес электронной почты',
+            'E-mail': 'Адрес электронной почты',
+            'Send': 'Отправлен',
+            'We will notify you of product availability by e-mail': 'Мы уведомим вас о поступлении товара в наличии',
+            'Color': 'Цвет',
+            'Change': 'Изменить размер',
+            'Availability': 'Наличие',
+            'Big': 'Много',
+            'Average': 'Достаточно',
+            'Small': 'Мало',
+            'Search': 'Найти',
+            'Selected size': 'Выбранный размер',
+            'City': 'Город',
+            'choose_size': 'Выбрать размер',
+            'Choose size': 'Выбрать размер',
+            'Availability in Your area': 'Наличие в вашем регионе',
+            'login': 'Войти',
+                        'cart_cart': 'Kорзина',
+            'cart_articles_qty': '%s шт.',
+            'cart_no_qty_reservation': 'Не откладывай покупки, добавление товаров в корзину не означает их бронирования',
+            'cart_color': 'Цвет',
+            'cart_size': 'Pазмер',
+            'cart_item_remove': 'Удалить',
+            'cart_items_price': 'Стоимость товаров',
+            'cart_delivery_price': 'Доставка',
+            'cart_total': 'Всего',
+            'cart_vat_included': 'с НДС',
+            'cart_to_checkout': 'Перейти к оформлению',
+            'cart_coupon': 'У меня есть промокод',
+            'cart_savings': 'Вы экономите',
+            'cart_savings_total': 'Вы экономите',
+            'cart_coupon_add_code': 'Введите код',
+            'cart_coupon_add': 'Добавить',
+            'cart_remove_coupon': 'Удалить',
+            'cart_coupon_approved': 'Код %s успешно принят',
+            'cart_qty_approve': 'Подтвердить',
+            'cart_qty_remove': 'Удалить',
+            'cart_free_delivery': 'Бесплатно',
+            'cart_empty': 'Ваша корзина пуста',
+            'cart_empty_logged_continue_shopping': 'Продолжить покупки',
+            'cart_empty_or_continue_shopping': 'Или продолжайте покупки',
+            'cart_empty_guest_info': 'Если вы добавили товары в корзину во время прошлого визита, попробуйте войти в ваш аккаунт.',
+            'cart_code_expired': 'Нам жаль',
+            'cart_qty_soldout_info': 'Продукт с выбранным размером недоступен',
+            'cart_unavailable': 'Недоступно',
+            'cart_go_to_product': 'Перейти к странице товара',
+            'cart_soldout': 'Распродано',
+            'cart_cost_and_time_of_delivery': 'Сроки и стоимость доставки',
+            'cart_delivery_from': 'от %s ¤',
+            'cart_last_qty': 'Последние штуки',
+            'login_change_password': 'Изменить пароль',
+            'login_link_expired': 'Ссылка недействительна. Используйте функцию восстановления пароля',
+            'login_send': 'Выслать',
+            'login_new_password': 'Введите новый пароль',
+            'login_login': 'Войти',
+            'login_via_facebook': 'Войти через Facebook',
+            'login_via_vkontakte': 'Войти через ВКонтакте',
+            'login_password_changed': 'Ваш пароль был изменён',
+            'login_user': 'Уже зарегистрированы?',
+            'login_new_user': 'Вы здесь первый раз?',
+            'login_email': 'Адрес электронной почты',
+            'login_password': 'Пароль',
+            'login_password_unknown': 'Я забыл пароль',
+            'login_name': 'Имя',
+            'login_surname': 'Фамилия',
+            'login_create_account': 'Создать аккаунт',
+            'login_password_forgotten': 'Я забыл пароль',
+            'login_password_forgotten_info': 'Если указанный адрес связан с аккаунтом Клиента, будет выслана ссылка для смены пароля.',
+            'login_usp': 'Вы получите',
+            'login_request_error': 'Мы приносим извинения, что-то пошло не так. Пожалуйста,попробуйте еще раз.',
+            'login_newsletter_term': 'Да, я хочу подписаться на рассылку и получить скидку 10&#37;.',
+            'optional': 'опционально',
+            'register_subscribe_newsletter_benefits': 'Да, я хочу подписаться на рассылку и получить скидку 10%.',
+            'forgot_password': 'Я забыл пароль',
+            'forgot_password_mail_send_info': 'Если указанный e-mail связан с аккаунтом, мы вышлем ссылку для изменения пароля',
+            'show_password': 'Показать пароль',
+            'hide_password': 'Скрыть пароль',
+            'checkout_delivery_method': 'Способ доставки',
+            'checkout_store_chosen_store': 'Выбранный магазин',
+            'checkout_change': 'Изменить',
+            'checkout_store_customer_details': 'Данные клиента',
+            'checkout_courier_customer_details': 'Адрес доставки',
+            'checkout_payment_method': 'Способ оплаты',
+            'checkout_invoice_data': 'Данные для счёта',
+            'checkout_invoice': 'Счёт',
+            'checkout_buy_and_pay': 'Купить и оплатить',
+            'checkout_address_add': 'Добавить',
+            'checkout_additional_info_details': 'Например, этаж или название фирмы',
+            'checkout_save': 'Сохранить',
+            'checkout_address_edit': 'Изменить',
+            'checkout_phone_courier_details': 'Перед доставкой, курьер свяжется с Вами ',
+            'checkout_name': 'Имя',
+            'checkout_surname': 'Фамилия',
+            'checkout_phone': 'Телефон',
+            'checkout_street': 'Улица',
+            'checkout_house_no': 'Дом/квартира',
+            'checkout_apartment_no': 'Квартира',
+            'checkout_zip_code': 'Почтовый индекс',
+            'checkout_additional_info': 'Дополнительная информция(необязательно)',
+            'checkout_invoice_private': 'Частное лицо',
+            'checkout_invoice_company': 'Юридическое лицо',
+            'checkout_company_name': 'Название компании',
+            'checkout_company_vat_id': 'ИНН',
+            'checkout_company_vat_dph_id': 'ИНН',
+            'checkout_company_regon_id': 'ИНН',
+            'checkout_delivery_address': 'Адрес доставки',
+            'checkout_phone_foreign_info': 'Если имеется заграничный номер телефона, свяжитесь с нами',
+            'checkout_store_phone_details': 'В момент получения заказа, мы попросим Вас показать номер заказа и паспорт',
+            'checkout_courier_previous_address_info': 'Предыдущие адреса доставки',
+            'checkout_choose': 'Выбрать',
+            'checkout_add_new_address': 'Добавить новый адрес',
+            'checkout_edit': 'Редактировать',
+            'checkout_store_search': 'Поиск',
+            'checkout_store_search_geo': 'Показать ближайший',
+            'checkout_store_details': 'Детали',
+            'checkout_store_choose': 'Выбрать',
+            'checkout_store_contact': 'Контакт',
+            'checkout_store_opening_hours': 'Контакт',
+            'checkout_your_order': 'Ваш заказ',
+            'checkout_free_delivery': 'Доставка бесплатна',
+            'checkout_store_select': 'Выбрать магазин',
+            'checkout_back_to_cart': 'Корзина',
+            'carrier_checkout_free_delivery': 'Доставка бесплатна',
+            'checkout_choose_shop_from_the_list': 'Выберите магазин из списка',
+            'validation_key_illegal': 'Пожалуйста, введите допустимые символы',
+            'validation_key_max': 'Макс. {0} Знаков',
+            'validation_key_min': 'Минимум {0} символов',
+            'validation_key_required': 'Это поле обязательно',
+            'checkout_shipping_form_errors': 'Something went wrong. Please check your data.',
+            'checkout_unknown_postcode': 'Неизвестный почтовый индекс',
+            'checkout_unknown_postcode_info': 'Приносим свои извинения, в вашем регионе нет возможности воспользоваться курьерской доставкой. Пожалуйста, выберите доставку в отделение Почты России.',
+            'checkout_unknown_postcode_continue': 'Продолжить',
+            'checkout_unknown_postcode_edit': 'Редактировать',
+            'checkout_pickup_select': 'Choose pickup point',
+            'checkout_pickup_choose': 'mo_checkout_pickup_choose',
+            'checkout_store_chosen': 'Выбранный магазин',
+            'checkout_pickup_chosen': 'Chosen pickup point',
+            'checkout_pickup_name': 'mo_checkout_pickup_name',
+            'checkout_pickup_phone_details': 'Phone number is required for pickup',
+            'checkout_pickup_choose_from_the_list': 'Choose pickup point from list',
+            'checkout_store_choose_from_the_list': 'Выберите магазин из списка',
+            'checkout_pickup_customer_details': 'Данные клиента',
+            'checkout_inpost_point_name': 'mo_checkout_inpost_point_name',
+            'checkout_tooltip_choose_shipping_to_continue': 'Выбрать способ доставки',
+            'checkout_store_no_results': 'нет магазинов в &#37;',
+            'checkout_pickup_no_results': 'Нет результатов для &#37;',
+            'checkout_pickup_geo_alert_title': 'mo_checkout_pickup_geo_alert_title',
+            'checkout_pickup_geo_alert_ok': 'mo_checkout_pickup_geo_alert_ok',
+            'checkout_pickup_geo_alert_msg': 'mo_checkout_pickup_geo_alert_msg',
+            'checkout_store_list': 'mo_checkout_store_list',
+            'checkout_pickup_list': 'mo_checkout_pickup_list',
+            'checkout_pickup_point_no_results': 'mo_checkout_pickup_point_no_results',
+            'checkout_pickup_point_customer_details': 'mo_checkout_pickup_point_customer_details',
+            'checkout_pickup_point_open_hours': 'mo_checkout_pickup_point_open_hours',
+            'checkout_pickup_point_phone': 'mo_checkout_pickup_point_phone',
+            'checkout_pickup_point_choose': 'mo_checkout_pickup_point_choose',
+            'checkout_pickup_point_search_placeholder': 'mo_checkout_pickup_point_search_placeholder',
+            'checkout_pickup_point_default_label': 'mo_checkout_pickup_point_default_label',
+            'checkout_pickup_point_phone_number': 'mo_checkout_pickup_point_phone_number',
+            'checkout_pickup_point_details': 'mo_checkout_pickup_point_details',
+            'checkout_pickup_point_monday': 'mo_checkout_pickup_point_monday',
+            'checkout_pickup_point_tuesday': 'mo_checkout_pickup_point_tuesday',
+            'checkout_pickup_point_wednesday': 'mo_checkout_pickup_point_wednesday',
+            'checkout_pickup_point_thursday': 'mo_checkout_pickup_point_thursday',
+            'checkout_pickup_point_friday': 'mo_checkout_pickup_point_friday',
+            'checkout_pickup_point_saturday': 'mo_checkout_pickup_point_saturday',
+            'checkout_pickup_point_sunday': 'mo_checkout_pickup_point_sunday',
+            'checkout_pickup_point_open_24_7': 'mo_checkout_pickup_point_open_24_7',
+            'checkout_no_options_available': 'mo_checkout_no_options_available',
+            'checkout_no_options_match_filter': 'mo_checkout_no_options_match_filter',
+            'checkout_no_valid_value': 'mo_checkout_no_valid_value',
+            'checkout_region': 'mo_checkout_region',
+            'checkout_city': 'Город',
+            'page_header_search': 'mo_page_header_search',
+            'page_header_user_account': 'mo_page_header_user_account',
+            'page_header_cart': 'mo_page_header_cart',
+            'page_header_logout': 'mo_page_header_logout',
+            'page_header_order_history': 'mo_page_header_order_history',
+            'page_header_returns': 'mo_page_header_returns',
+            'page_header_account': 'mo_page_header_account',
+            'page_header_addresses': 'mo_page_header_addresses',
+            'page_header_invoices': 'mo_page_header_invoices',
+            'page_header_title_log_in': 'mo_page_header_title_log_in',
+            'page_header_log_in': 'mo_page_header_log_in',
+            'page_header_title_register': 'mo_page_header_title_register',
+            'page_header_register_info': 'mo_page_header_register_info',
+            'page_header_register': 'mo_page_header_register',
+            'page_header_language': 'mo_page_header_language',
+            'search_box_search': 'mo_search_box_search',
+            'page_header_cookie_name': 're_dcm',
+            'search_box_cancel': 'mo_search_box_cancel',
+            'checkout_returned_user_info': 'mo_checkout_returned_user_info',
+            'checkout_telephone_is_invalid': 'Неправильный номер',
+            'checkout_select_delivery_method': 'mo_checkout_select_delivery_method',
+            'checkout_select_payment_method': 'mo_checkout_select_payment_method',
+            'checkout_check_delivery_data': 'Проверьте правильность введённого адреса',
+            'checkout_check_invoice_data': 'подтвердите данные для счета-фактуры, чтобы разместить заказ',
+            'minicart_sold_out': 'mo_minicart_sold_out',
+            'minicart_delivery': 'mo_minicart_delivery',
+            'minicart_delivery_from': 'mo_minicart_delivery_from',
+            'minicart_final_price': 'mo_minicart_final_price',
+            'minicart_vat_included': 'mo_minicart_vat_included',
+            'minicart_go_to_cart': 'mo_minicart_go_to_cart',
+            'minicart_size': 'mo_minicart_size',
+            'minicart_out_of_stock': 'mo_minicart_out_of_stock',
+            'minicart_qty': 'mo_minicart_qty',
+            'checkout_fix_invalid_data': 'пожалуйста, исправьте следующие ошибки',
+            'menu_footer_help': 'mo_menu_footer_help',
+            'menu_footer_shops': 'mo_menu_footer_shops',
+            'menu_footer_newsletter': 'mo_menu_footer_newsletter',
+            'menu_footer_account': 'mo_menu_footer_account',
+            'menu_footer_orders': 'mo_menu_footer_orders',
+            'menu_footer_login': 'mo_menu_footer_login',
+            'menu_footer_register': 'mo_menu_footer_register',
+            'menu_footer_logout': 'mo_menu_footer_logout',
+            'menu_footer_language': 'mo_menu_footer_language',
+            'menu_footer_or': 'mo_menu_footer_or'
+        },
+        'i20df': {
+            'months':
+                [
+                    'Январь',
+                    'Февраль',
+                    'Март',
+                    'Апрель',
+                    'Май',
+                    'Июнь',
+                    'Июль',
+                    'Авгуcт',
+                    'сентябрь',
+                    'Октябрь',
+                    'Ноябрь',
+                    'Декабрь'
+                ],
+            'days':
+                [
+                    'Воскресенье',
+                    'Понедельник',
+                    'Вторник',
+                    'среда',
+                    'Четверг',
+                    'Пятница',
+                    'суббота'
+                ],
+            'today':
+                'сегодня'
+
+        },
+        'path': {
+            'basket_url': 'https://www.mohito.com/ru/ru/checkout/cart/',
+            'uenc' : 'aHR0cHM6Ly93d3cubW9oaXRvLmNvbS9ydS9ydS8,',
+            'cookie_name' : 'B10ECE922DB911E28F1774896188709B',
+            'newsletter_subscribe_url': 'https://www.mohito.com/ru/ru/subscription/'
+        },
+        'MohitoStoreLocatorImages': {
+            blank: 'https://www.mohito.com/ru/ru/skin/frontend/mohito/default/img/storelocator/blankMarker.png',
+            marker: 'https://www.mohito.com/ru/ru/skin/frontend/mohito/default/img/storelocator/marker.png',
+            shadow: 'https://www.mohito.com/ru/ru/skin/frontend/mohito/default/img/storelocator/markerShadow.png',
+            exit: 'https://www.mohito.com/ru/ru/skin/frontend/mohito/default/img/storelocator/infoExit.png'
+        },
+        facebook: {
+            'isFacebookLogInEnabled': false,
+            'isEnabled': '1',
+            'appId': '1188125444577111',
+            'channelUrl': 'https://www.mohito.com/ru/ru/fb/channel/index/locale/en_US/',
+            'locale': 'ru_RU',
+            'connectUrl': 'https://www.mohito.com/ru/ru/fb/connect/login/',
+            'permissions': 'email,user_birthday'
+        },
+        'vkontakte': {
+            'isEnabled': '1',
+            'appId': '6235092',
+            'redirectUrl': 'https://www.mohito.com/ru/ru/vkontakte/customer/login/',
+            'loggedUrl': 'https://www.mohito.com/ru/ru/customer/account/edit/',
+            'loginUrl': 'https://oauth.vk.com/authorize?client_id=6235092&display=popup&redirect_uri=https://www.mohito.com/ru/ru/vkontakte/customer/login/&scope=email&response_type=code&v=5.67'
+        },
+        brandName: 'mohito',
+        isMohito: '1',
+        currency: 'RUB',
+        baseUrl: 'https://www.mohito.com/ru/ru/',
+        checkout: {
+            addressAutocomplete: 'https://www.mohito.com/ru/ru/ajx/checkout/addressSuggestions/',
+            order: 'https://www.mohito.com/ru/ru/customer/account/login/referer/aHR0cHM6Ly93d3cubW9oaXRvLmNvbS9ydS9ydS9jaGVja291dC9jYXJ0Lw,,/',
+            orderError: 'https://www.mohito.com/ru/ru/checkout/order/error/',
+            orderCreated: 'https://www.mohito.com/ru/ru/checkout/order/created/',
+            orderSubmit: 'https://www.mohito.com/ru/ru/checkout/order/submit/',
+            cheapestShippingMethodPrice: '280',
+            freePrice: '0',
+            addressFieldNames: {
+                street1: 'street1',
+                street2: 'street2'
+            },
+            cart: {
+                minicartEnabled: '1',
+                index: 'https://www.mohito.com/ru/ru/checkout/cart/',
+                get: 'https://www.mohito.com/ru/ru/ajx/checkoutcart/get/',
+                add: 'https://www.mohito.com/ru/ru/ajx/checkoutcart/add/',
+                remove: 'https://www.mohito.com/ru/ru/ajx/checkoutcart/update/',
+                update: 'https://www.mohito.com/ru/ru/ajx/checkoutcart/update/',
+                showLastItemsLabel: false,
+                maxAvailableItems: 3            },
+            payments: {
+                payuHub: {
+                    publicKey: '7e2ece78-7f2b-451e-8cc6-0e7610df04d6',
+                    environment: 'production',
+                    url: {
+                        get3d: 'https://www.mohito.com/ru/ru/paymenthub/card/get3d/',
+                        logTokenError: 'https://www.mohito.com/ru/ru/paymenthub/card/logTokenError/',
+                        tryAuthorize: 'https://www.mohito.com/ru/ru/paymenthub/card/tryAuthorize/'
+                    },
+                    verify: {
+                        delay: '9000',
+                        maxAttempts: '20'
+                    }
+                },
+                googlepay: {
+                    merchantId: '',
+                    merchantName: '',
+                    environment: 'PRODUCTION',
+                    posId: '',
+                    allowedCardNetworks: [''],
+                    allowedCardAuthMethods: ['']
+                }
+            },
+            options: {
+                show_regon: false,
+                show_vatdph: false,
+                show_pesel: false,
+                show_invoice_for_company: true,
+                offer_invoice: false            },
+            shipping: {
+                blockOutOfService: {
+                    enabled: true,
+                    url: 'https://www.mohito.com/ru/ru/shippingmethod/method/getoutOfService/'
+                },
+                blockNotInService: {
+                    enabled: false,
+                    url: 'https://www.mohito.com/ru/ru/shippingmethod/method/isPostcodeInService/'
+                },
+                multiPickupMap: false,
+                multiPickupCourierCode: 'LPP_MOHITO',
+                startingPoint: {
+                    latitude: 52.232855000000000700310920365154743194580078125,
+                    longitude: 20.921113999999999322199073503725230693817138671875                },
+                startingZoom: 10            }
+        },
+        genesys: {
+            languageCode: 'ru',
+            chatEnabled: true,
+            chatButtonEnabled: true,
+            privacyPolicyText: 'Filling out the details means reading and accepting the privacy policy.',
+            url: {
+                script: 'https://www.mohito.com/ru/ru/skin/frontend/base/default/js/genesys/widgets/widgets.min.js',
+                api: 'https://cc.lppsa.com:8080/genesys/2/chat/customer-support',
+                translation: 'https://www.mohito.com/ru/ru/skin/frontend/base/default/js/genesys/localization.mohito.json',
+                privacyPolicy: 'https://www.mohito.com/ru/ru/privacy-policy/'
+            }
+        },
+        locale: {
+            symbols: {"decimal":",","group":" ","zero":"0","pattern":"#"},
+            currencyNumber: '"#,##0 ¤"'
+        },
+        general: {
+            country: {
+                default: 'ru',
+                code: 'ru'
+            }
+        },
+        productCard: {
+            hideStationaryStoreAvailability: false,
+            get: null,
+            wcl: null,
+            availability: 'https://www.mohito.com/ru/ru/ajx/comingsoon/save/'
+        },
+        url: {
+            base: 'https://www.mohito.com/ru/ru/'
+        },
+        productRecommendations: {"display": true, "recommendations": []},
+        pickupPoints: {"storemethod":"https:\/\/www.mohito.com\/ru\/ru\/ajx\/stores\/pickup\/","courier_ups_pp":"https:\/\/www.mohito.com\/ru\/ru\/ajx\/accesspoint\/search\/","courier_gls_pp":"https:\/\/www.mohito.com\/ru\/ru\/ajx\/packetpoint\/search\/","glseepp":"https:\/\/www.mohito.com\/ru\/ru\/ajx\/packetpoint\/search\/","inpostpp":"https:\/\/www.mohito.com\/ru\/ru\/ajx\/pickuppoint\/search\/carrier\/inpostpp\/","dhlppmethod":"https:\/\/www.mohito.com\/ru\/ru\/ajx\/pickuppoint\/search\/carrier\/dhlppmethod\/","postomatspp":"https:\/\/www.mohito.com\/ru\/ru\/ajx\/pickuppoint\/search\/carrier\/postomatspp\/","postomatsppcod":"https:\/\/www.mohito.com\/ru\/ru\/ajx\/pickuppoint\/search\/carrier\/postomatsppcod\/"},
+        pickupPointsApi: "https:\/\/www.mohito.com\/ru\/ru\/ajx\/pickuppoint\/searchWithPaging\/",
+        geoValidation: {
+            enabled: false,
+            commonPattern: {
+                required: true,
+                pattern: '',
+                minlength: '',
+                maxlength: '90'
+            },
+            phonePattern: {
+                required: true,
+                pattern: '',
+                minlength: '',
+                maxlength: ''
+            },
+            postCodePattern: {
+                pattern: '^.*$',
+                minlength: '',
+                maxlength: ''
+            },
+            defaultDialCode: '+7',
+            contactText: 'Если у вас есть какие-либо сомнения и/или трудности с заполнением формы, пожалуйста, свяжитесь с нашей <a href="https://www.mohito.com/ru/ru/contacts/" target="_blank">службой поддержки.</a>',
+            tooltipText: 'Последние 4 цифры номера телефона будут использованы для оформления заказа в выбранном вами магазине.',
+            tooltipCourierText: 'Different dial code? Contact with us',
+            dialCodes: ["+30","+31","+32","+33","+34","+36","+39","+40","+43","+44","+45","+46","+47","+48","+49","+350","+351","+352","+353","+354","+356","+357","+358","+359","+370","+371","+372","+385","+386","+420","+421","+423"],
+            eav_rules: {
+                customer_address_telephone: {
+                    is_required: true,
+                    required_on_checkout: true,
+                    pattern_validation: '',
+                    min_text_length: 0,
+                    max_text_length: 0                },
+                customer_address_dialcode: {
+                    is_required: true,
+                    required_on_checkout: true,
+                    pattern_validation: '',
+                    min_text_length: 0,
+                    max_text_length: 0                },
+                customer_address_postcode: {
+                    pattern_validation: '^.*$',
+                    min_text_length: 0,
+                    max_text_length: 0                },
+                'default': {
+                    is_required: true,
+                    required_on_checkout: true,
+                    pattern_validation: '',
+                    min_text_length: 0,
+                    max_text_length: 90                }
+            }
+        },
+        stores: {
+            check: 'https://www.mohito.com/ru/ru/ajx/stores/check/',
+            pickup: 'https://www.mohito.com/ru/ru/ajx/stores/pickup/'
+        },
+        isCommercialWebsite: true,
+        customer: {
+            account: {
+                login: 'https://www.mohito.com/ru/ru/customer/account/login/',
+                ajaxLogin: 'https://www.mohito.com/ru/ru/ajx/customer/login/uenc/aHR0cHM6Ly93d3cubW9oaXRvLmNvbS9ydS9ydS9jaGVja291dC9jYXJ0Lw,,/',
+                register: 'https://www.mohito.com/ru/ru/customer/account/register/',
+                ajaxRegister: 'https://www.mohito.com/ru/ru/ajx/customer/register/',
+                ajaxRecover: 'https://www.mohito.com/ru/ru/ajx/customer/recover/',
+                changeForgottenPassword: 'https://www.mohito.com/ru/ru/customer/account/changeforgottenpassword/',
+                forgotPassword: 'https://www.mohito.com/ru/ru/customer/account/forgotpassword/',
+                regulationPost: 'https://www.mohito.com/ru/ru/ajx/customer/regulationsPost/'
+            },
+            data: JSON.parse('{"isLoggedIn":false}')
+        },
+        isInvoiceEnabled: false,
+        carriers: {
+            freeShipping: {
+                active: false            }
+        },
+        google: {
+            maps: {
+                url: '//maps.googleapis.com/maps/api/js',
+                api_key:  'AIzaSyDrZQOUUtlw_mTY6ckeKz6hZfpDdmS0_7I'
+            }
+        },
+        isCart: false,
+        isCheckout: false,
+        catalog: {
+            search: 'https://www.mohito.com/ru/ru/catalogsearch/result/?q=%s'
+        },
+        rma: {
+            bankAccountValidation: ''        },
+        dadata: {
+            settings: {
+                enabled: false                            },
+            suggestions: {
+                enabled: false                            }
+        },
+        varnish_data: {
+            url: 'https://www.mohito.com/ru/ru/varnish/ajax/newindex/'
+        }
+    };
+    //]]>
+</script>
+<script>
+    (function () {
+        if (!window.getConfig) {
+            window.getConfig = function() {
+                return window.global || {};
+            }
+        }
+
+        if (!window.getTranslations) {
+            window.getTranslations = function() {
+                return window.global.i18n || {};
+            }
+        }
+    })();
+</script>
+<script type="text/javascript">
+    var LPP = {
+        common: {
+            baseUrl: 'https://www.mohito.com/ru/ru/',
+            brandName: 'Mohito',
+            storeCode: 'moh_ru_ru',
+            category: {
+              id: '1725'
+            },
+            checkout: {
+                blockOutOfServiceEnabled: '1' === '1',
+                blockNotInServicePostcodesEnabled: '0' === '1',
+                postcodeAutocompleteEnabled: '1' === '1',
+                shouldShowInvoice: '0' === '1',
+                order: {
+                    submit: 'https://www.mohito.com/ru/ru/checkout/order/submit/',
+                    error: 'https://www.mohito.com/ru/ru/checkout/order/error/'
+                }
+            },
+            payments: {
+                cybersource: {
+                    creditCardTypesInService: ['001','002'],
+                    silentPayEnabled: '' === '1'},
+                googlepay: {
+                    merchantId: '',
+                    merchantName: '',
+                    environment: 'PRODUCTION',
+                    posId: '',
+                    allowedCardNetworks: [''],
+                    allowedCardAuthMethods: ['']
+                }
+            },
+            prices: {
+                isPriceInt: !!+'1',
+                currencyCode: 'RUB'
+            },
+            shipping: {
+                dummyCourierMethodCod: 'dummycouriermethodcod',
+                storeMethod: 'storemethod'
+            },
+            spinnerTemplateUrl: '/skin/frontend/base/default/lib/lpp-common/src/components/spinner/spinner.html',
+            rma: {
+                validateRussianAccountNumberEnabled: '1' === '1'
+            },
+            recaptchaEnabled: true,
+            sales: {
+                order: {
+                    history: {}
+                }
+            }
+        },
+        sinsay: {},
+        reserved: {},
+        house: {},
+        cropp: {},
+        mohito: {}
+    };
+
+    if (LPP.common.checkout.blockOutOfServiceEnabled) {
+        LPP.common.checkout.isPostCodeOutOfServiceUrl = 'https://www.mohito.com/ru/ru/shippingmethod/method/getoutOfService/';
+    }
+
+    if (LPP.common.checkout.blockNotInServicePostcodesEnabled) {
+        LPP.common.checkout.isPostcodeInServiceUrl = 'https://www.mohito.com/ru/ru/shippingmethod/method/isPostcodeInService/';
+    }
+
+    global.i18n['yes'] = 'Да';
+    global.i18n['no'] = 'Нет';
+    global.i18n['toFreeShipping'] = 'Для бесплатной доставки необходимо <p class="price"><strong>%s</strong> <small>%s</small></p>';
+    global.i18n['are_you_sure_to_want_to_change_payment_method'] = 'Are you sure to want to change payment method?';
+
+    if (LPP.common.checkout.postcodeAutocompleteEnabled) {
+        LPP.common.checkout.getPostcodeAndValidateAddressUrl = 'https://www.mohito.com/ru/ru/shippingmethod/method/getPostcodeAndValidateAddress/';
+        LPP.common.checkout.postcodeAutocompletePopupTemplateUrl = '/skin/frontend/base/default/lib/lpp-common/src/components/checkout/postcodeAutocompletePopupTemplate.html';
+        global.i18n['incorrect_city'] =  'Неверное значение: город';
+        global.i18n['incorrect_street'] =  'Неверное значение: улица';
+        global.i18n['incorrect_house'] =  'Неверное значение: номер дома';
+        global.i18n['incorrect_apartment'] =  'Неверное значение: квартира';
+        global.i18n['incorrect_address'] = 'Неверное значение: адрес';
+        global.i18n['foreign_address'] =  'Другой адрес';
+        global.i18n['typo_in_address'] = 'Возможно, вы указали неверный адрес';
+        global.i18n['did_you_mean_address_below'] = 'Вы имели ввиду адрес ниже?';
+    }
+
+    global.i18n['credit_card_type_not_in_service'] = 'Credit card not in service (Must be VISA or Mastercard)';
+    global.i18n['credit_card_expired'] = 'Credit card is expired';
+    global.i18n['invoices'] = 'Invoices';
+    global.i18n['credit_memos'] = 'Credit memos';
+    global.i18n['no_documents'] = 'Documents list is empty';
+</script>
+<style id="acj">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("acj"); 
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = ["HK","IE","MO","PA"];
+//]]>
+</script>
+<script type="text/javascript">
+    </script>
+<style type="text/css">
+#noscript {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999999999;
+  background-color: #FFF;
+}
+
+#noscript p {
+  padding: 64px 0;
+  width: 400px;
+  margin: 0 auto;
+}
+</style><link rel="canonical" href="http://www.mohito.com/ru/ru/" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<link rel="alternate" hreflang="en-PL" href="https://www.mohito.com/pl/en/" />
+<link rel="alternate" hreflang="pl-PL" href="https://www.mohito.com/pl/pl/" />
+<link rel="alternate" hreflang="cs-CZ" href="https://www.mohito.com/cz/cz/" />
+<link rel="alternate" hreflang="en-CZ" href="https://www.mohito.com/cz/en/" />
+<link rel="alternate" hreflang="ru-RU" href="https://www.mohito.com/ru/ru/" />
+<link rel="alternate" hreflang="en-EN" href="https://www.mohito.com/mo/en/" />
+<link rel="alternate" hreflang="sk-SK" href="https://www.mohito.com/sk/sk/" />
+<link rel="alternate" hreflang="ro-RO" href="https://www.mohito.com/ro/ro/" />
+<link rel="alternate" hreflang="hu-HU" href="https://www.mohito.com/hu/hu/" />
+<link rel="alternate" hreflang="de-DE" href="https://www.mohito.com/de/de/" />
+<link rel="alternate" hreflang="lt-LT" href="https://www.mohito.com/lt/lt/" />
+<link rel="alternate" hreflang="lv-LV" href="https://www.mohito.com/lv/lv/" />
+<link rel="alternate" hreflang="et-EE" href="https://www.mohito.com/ee/et/" />
+<link rel="alternate" hreflang="hr-HR" href="https://www.mohito.com/hr/hr/" />
+<link rel="alternate" hreflang="ru-UA" href="https://www.mohito.com/ua/ru/" />
+<link rel="alternate" hreflang="uk-UA" href="https://www.mohito.com/ua/uk/" />
+<link rel="alternate" hreflang="hr-HR" href="https://www.mohito.com/bg/bg/" />
+<link rel="alternate" hreflang="hr-HR" href="https://www.mohito.com/si/sl/" />
+<script type="text/javascript">
+var color_circle_images = {
+    'def': 'https://www.mohito.com/ru/ru/skin/frontend/base/default/img/color-circle-default.png',
+    'unavailable': 'https://www.mohito.com/ru/ru/skin/frontend/base/default/img/color-circle-unavailable.png',
+    'def_hover': 'https://www.mohito.com/ru/ru/skin/frontend/base/default/img/color-circle-default-hover.png',
+    'unavailable_hover': 'https://www.mohito.com/ru/ru/skin/frontend/base/default/img/color-circle-unavailable-hover.png',
+    'blank': 'https://www.mohito.com/ru/ru/skin/frontend/mohito/default/img/blank.gif'
+};
+</script><link rel="stylesheet" type="text/css" href="https://www.mohito.com/ru/ru/skin/frontend/mohito/default/css/basestyle.css?228279cdaeaa" media="all" />
+<link rel="stylesheet" type="text/css" href="https://www.mohito.com/ru/ru/skin/frontend/mohito/default/css/print.css?228279cdaeaa" media="print" />
+<link rel="stylesheet" type="text/css" href="https://www.mohito.com/ru/ru/skin/frontend/base/default/css/genesys/widgets.min.css?228279cdaeaa" media="all" />
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/narch/runtime.js?228279cdaeaa" data-no-burn></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/narch/vendor.js?228279cdaeaa" data-no-burn></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/narch/shared.js?228279cdaeaa" data-no-burn></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/narch/polyfills.js?228279cdaeaa" data-no-burn></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/narch/legacy-bridge.js?228279cdaeaa" data-no-burn></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/narch/validation/bridge.js?228279cdaeaa" data-no-burn></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/js/jsLib_async.js.php?s=35&p=1"></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/js/mohito/prebaselib.js?228279cdaeaa"></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/base/default/js/genesys/genesysWidget.js?228279cdaeaa"></script>
+<script type="text/javascript" src="https://www.mohito.com/ru/ru/skin/frontend/base/default/js/analytics.js?228279cdaeaa"></script>
+<meta name="yandex-verification" content="c06c2f9cb5aa8cfd" />
 </head>
+<body class=cms-home id="cms-page">
 
-<body dir="ltr">
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MXLRG9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+//<![CDATA[
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MXLRG9');
+//]]>
+</script>
 
-</body>
+<div id="test-ab-container" data-slot="none" style="display: none;"></div><noscript id="noscript">
+<p>
+    Для работы с сайтом поддержка JavaScript должна быть включена. Возможно, поддержка JavaScript не включена или Ваш браузер ее не поддерживает. Включите поддержку JavaScript в настройках браузера и обновите страницу.</p>
+</noscript>
+<script type="text/javascript">
+    var nsm = document.getElementById('noscript');
+    nsm.style.display = 'none';
+    
+    (function() {var img = document.createElement('img'); img.src = 'https://www.mohito.com/ru/ru/media/blank.png'}());
+</script> <script type="text/javascript">
+        dataLayer.push({"event":"gtmData","userLogged":0,"tagVersion":"","siteType":"m","currency":"RUB","pageType":"home","brand":"Mohito"});
+    </script>
+<script type="text/javascript">
+        window.getMustShowTerms = function() {
+            return false;
+        }
+    </script>
+<div class="front-page">
+<!--[if lt IE 9]>
+<div id="browser_container">
+    <div class="browser_info">
+        <h2>Twoja przeglądarka jest nieaktualna</h2>
+        <p>Używasz starszej wersji przeglądarki Internet Explorer przez co nasza strona może wyswietlać się niepoprawnie</p>
+        <p>Proszę zaktualizuj ją klikając <a href="https://browsehappy.com/" target = "_blank">tutaj</a> i odwiedzaj nas częściej</p>
+    </div>
+</div>
+<![endif]-->
+<div class="top-info-bar">
+<ul id="topInfoBar">
+<li class="hidden-slider-image">
+<li class="hidden-slider-image">
+<span>30 дней на возврат товара</span>
+</li>
+<li class="hidden-slider-image">
+<span>Бесплатная доставка от 2000 руб.</span>
+</li>
+<li class="hidden-slider-image">
+<span></span>
+</li>
+</li>
+ </ul>
+<div class="store-switcher-container">
+<a class="store-switcher" href="/special/store/">Язык: <b>ru</b></a>
+</div>
+</div>
+<div id="header" class="header" data-system='{"commercial": true}'>
+<div class="logo">
+<button class="cmn-toggle-switch cmn-toggle-switch__htx js-hamburger-menu">
+<span></span>
+</button>
+<a href="https://www.mohito.com/ru/ru/" title="Mohito"><img src="https://www.mohito.com/ru/ru/skin/frontend/mohito/default/img/logo.png" alt="Mohito" /></a>
+</div>
+<div id="main-menu-wrapper" class="menu-top-full">
+<div class="mobile-menu-icons">
+<div id="mobile-menu-right" rel="toplinks" class="mobile-menu-right placeholder"></div>
+</div>
+<ul id="main-menu" class="main-menu">
+<li class=" collection" data-sys-name="collection" id="main-menu-collection">
+<span class="submenu-title header-">Коллекция</span>
 
+<ul class="lvl-2" id="main-menu-collection-branches">
+<li data-sys-name="all">
+<span>Одежда</span>
+</li>
+<li data-sys-name="sale ru">
+<a class="header-1" href="https://www.mohito.com/ru/ru/collection/sale-ru" title="Сезонная распродажа до -50%">Сезонная распродажа до -50%</a>
+</li>
+<li data-sys-name="celebration">
+<a class="header-2" href="https://www.mohito.com/ru/ru/collection/celebration" title="Celebration">Celebration</a>
+</li>
+<li data-sys-name="be parisienne">
+<a class="header-2" href="https://www.mohito.com/ru/ru/collection/be-parisienne" title="Be Parisienne">Be Parisienne</a>
+</li>
+<li data-sys-name="aquatic fantasy">
+<a class="header-2" href="https://www.mohito.com/ru/ru/collection/aquatic-fantasy" title="Aquatic Fantasy">Aquatic Fantasy</a>
+</li>
+<li data-sys-name="denim">
+<a href="https://www.mohito.com/ru/ru/collection/denim" title="Denim">Denim</a>
+</li>
+<li data-sys-name="total look">
+<a href="https://www.mohito.com/ru/ru/collection/total-look" title="Total Look">Total Look</a>
+</li>
+<li data-sys-name="spring essentials">
+<a href="https://www.mohito.com/ru/ru/collection/spring-essentials" title="Spring Essentials">Spring Essentials</a>
+</li>
+<li data-sys-name="spring with mohito">
+<a href="https://www.mohito.com/ru/ru/collection/spring-with-mohito" title="Цветочная история">Цветочная история</a>
+</li>
+<li data-sys-name="mohito cares">
+ <a href="https://www.mohito.com/ru/ru/collection/eco-aware" title="Eco Aware">Eco Aware</a>
+</li>
+<li data-sys-name="coming_soon">
+<a href="https://www.mohito.com/ru/ru/collection/coming-soon" title="Скоро в продаже!">Скоро в продаже!</a>
+</li>
+<li data-sys-name="bestsellers ru">
+<a href="https://www.mohito.com/ru/ru/collection/bestsellers-ru" title="Хиты продаж">Хиты продаж</a>
+</li>
+</ul>
+<ul id="mainMenuCollectionLeaves" class="lvl-2 main-menu-collection-leaves">
+<li class="all" data-sys-name="all">
+<a href="">Одежда</a>
+
+<ul class="lvl-3">
+<li data-sys-name="new major">
+<a class="header-2" href="https://www.mohito.com/ru/ru/collection/all/new-ru" title="Новинки">Новинки</a>
+</li>
+<li data-sys-name="dresses">
+<a href="https://www.mohito.com/ru/ru/collection/all/dresses" title="ПЛАТЬЯ, КОМБИНЕЗОНЫ">ПЛАТЬЯ, КОМБИНЕЗОНЫ</a>
+</li>
+<li data-sys-name="outerwear">
+<a href="https://www.mohito.com/ru/ru/collection/all/outerwear" title="Куртки, пальто">Куртки, пальто</a>
+</li>
+<li data-sys-name="shirts">
+<a href="https://www.mohito.com/ru/ru/collection/all/shirts" title="Рубашки">Рубашки</a>
+</li>
+<li data-sys-name="blouses">
+<a href="https://www.mohito.com/ru/ru/collection/all/blouses" title="Блузки">Блузки</a>
+</li>
+<li data-sys-name="trousers">
+<a href="https://www.mohito.com/ru/ru/collection/all/bryuki" title="Брюки">Брюки</a>
+</li>
+<li data-sys-name="sweaters, sweatshirts">
+<a href="https://www.mohito.com/ru/ru/collection/all/sweaters-sweatshirts" title="Свитеры, кардиганы">Свитеры, кардиганы</a>
+</li>
+<li data-sys-name="trousers, jeans">
+<a href="https://www.mohito.com/ru/ru/collection/all/dzhinsy" title="Джинсы">Джинсы</a>
+</li>
+
+<li data-sys-name="t-shirts">
+<a href="https://www.mohito.com/ru/ru/collection/all/t-shirts" title="Футболки">Футболки</a>
+</li>
+<li data-sys-name="jackets">
+<a href="https://www.mohito.com/ru/ru/collection/all/jackets" title="Пиджаки">Пиджаки</a>
+</li>
+<li data-sys-name="skirts">
+<a href="https://www.mohito.com/ru/ru/collection/all/skirts" title="Юбки">Юбки</a>
+</li>
+<li data-sys-name="tops">
+<a href="https://www.mohito.com/ru/ru/collection/all/tops" title="Топы">Топы</a>
+</li>
+<li data-sys-name="lingerie">
+<a href="https://www.mohito.com/ru/ru/collection/all/lingerie" title="Белье, Ночное белье">Белье, Ночное белье</a>
+</li>
+<li data-sys-name="shorts">
+<a href="https://www.mohito.com/ru/ru/collection/all/shorts" title="ШОРТЫ">ШОРТЫ</a>
+</li>
+</ul>
+</li>
+<li class="all" data-sys-name="all">
+<ul class="lvl-3">
+<li data-sys-name="menu accessories">
+<a class="header-4" href="https://www.mohito.com/ru/ru/collection/all/menu-accessories" title="АКСЕССУАРЫ">АКСЕССУАРЫ</a>
+</li>
+<li data-sys-name="bags, wallets">
+<a href="https://www.mohito.com/ru/ru/collection/all/bags-wallets" title="Сумки">Сумки</a>
+ </li>
+<li data-sys-name="shoes">
+<a href="https://www.mohito.com/ru/ru/collection/all/shoes" title="Обувь">Обувь</a>
+</li>
+<li data-sys-name="jewellery">
+<a href="https://www.mohito.com/ru/ru/collection/all/jewellery" title="Украшения">Украшения</a>
+</li>
+<li data-sys-name="belts">
+<a href="https://www.mohito.com/ru/ru/collection/all/belts" title="Ремни">Ремни</a>
+</li>
+<li data-sys-name="wallets">
+<a href="https://www.mohito.com/ru/ru/collection/all/wallets" title="Кошельки">Кошельки</a>
+</li>
+<li data-sys-name="scarves">
+<a href="https://www.mohito.com/ru/ru/collection/all/scarves" title="ШАРФЫ">ШАРФЫ</a>
+</li>
+<li data-sys-name="accessories">
+<a href="https://www.mohito.com/ru/ru/collection/all/accessories" title="Аксессуары">Аксессуары</a>
+</li>
+<li data-sys-name="hats">
+<a href="https://www.mohito.com/ru/ru/collection/all/hats" title="ШАПКИ">ШАПКИ</a>
+</li>
+</ul>
+</li>
+<li class="sale ru" data-sys-name="sale ru">
+<a href="https://www.mohito.com/ru/ru/collection/sale-ru" class="header-1">Сезонная распродажа до -50%</a>
+</li>
+<li class="celebration" data-sys-name="celebration">
+<a href="https://www.mohito.com/ru/ru/collection/celebration" class="header-2">Celebration</a>
+</li>
+<li class="be parisienne" data-sys-name="be parisienne">
+<a href="https://www.mohito.com/ru/ru/collection/be-parisienne" class="header-2">Be Parisienne</a>
+</li>
+<li class="aquatic fantasy" data-sys-name="aquatic fantasy">
+<a href="https://www.mohito.com/ru/ru/collection/aquatic-fantasy" class="header-2">Aquatic Fantasy</a>
+</li>
+<li class="denim" data-sys-name="denim">
+<a href="https://www.mohito.com/ru/ru/collection/denim">Denim</a>
+</li>
+<li class="total look" data-sys-name="total look">
+<a href="https://www.mohito.com/ru/ru/collection/total-look">Total Look</a>
+</li>
+<li class="spring essentials" data-sys-name="spring essentials">
+<a href="https://www.mohito.com/ru/ru/collection/spring-essentials">Spring Essentials</a>
+</li>
+<li class="spring with mohito" data-sys-name="spring with mohito">
+<a href="https://www.mohito.com/ru/ru/collection/spring-with-mohito">Цветочная история</a>
+</li>
+<li class="mohito cares" data-sys-name="mohito cares">
+<a href="https://www.mohito.com/ru/ru/collection/eco-aware">Eco Aware</a>
+</li>
+<li class="coming_soon" data-sys-name="coming_soon">
+<a href="https://www.mohito.com/ru/ru/collection/coming-soon">Скоро в продаже!</a>
+</li>
+<li class="bestsellers ru" data-sys-name="bestsellers ru">
+<a href="https://www.mohito.com/ru/ru/collection/bestsellers-ru">Хиты продаж</a>
+</li>
+</ul>
+</li>
+<li class=" perfume" data-sys-name="perfume">
+<a href="https://www.mohito.com/ru/ru/perfume/" title="Платья">Платья</a>
+</li>
+<li class=" stores" data-sys-name="stores">
+<a href="https://www.mohito.com/ru/ru/storelocator/" title="Магазины">Магазины</a>
+</li>
+<li class="get-inspired">
+<span>Get Inspired</span>
+<ul id="mainMenuCollectionLeaves" class="lvl-3 get-inspired-list">
+<li>
+<a href="https://www.mohito.com/ru/ru/lookbook/celebration?place=header&brick=new-1">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get_inspired_celebration_ss20.jpg" alt="">
+</picture>
+<p>Celebration</p>
+</a>
+</li>
+<li>
+<a href="https://www.mohito.com/ru/ru/collection/be-parisienne?place=header&brick=new-2">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get_inspired_be_parisienne.jpg" alt="">
+</picture>
+<p>Be Parisienne</p>
+</a>
+</li>
+<li>
+<a href="https://www.mohito.com/ru/ru/collection/aquatic-fantasy?place=header&brick=new-3">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get-inspired-aquatic-fantasy.jpg" alt="">
+</picture>
+<p>Aquatic Fantasy</p>
+</a>
+</li>
+<li>
+<a href="https://www.mohito.com/ru/ru/lookbook/spring-essentials?place=header&brick=new-4">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get-inspired-spring-essentials.jpg" alt="">
+</picture>
+<p>Spring Essentials</p>
+</a>
+</li>
+<li>
+<a href="https://www.mohito.com/ru/ru/lookbook/rock-and-dots?place=header&brick=new-5">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get-inspired-rockanddots.jpg" alt="">
+</picture>
+<p>Rock and Dots</p>
+</a>
+</li>
+<li>
+<a href="https://www.mohito.com/ru/ru/ss20-mo-eco-aware?place=header&brick=new-6">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get-inspired-ecoaware-ss20.jpg" alt="">
+</picture>
+<p>Eco Aware</p>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<script>
+    // dodanie naglowka do kategorii shoponline
+    function addMenuHeader() {
+        var $menu = $('#mainMenuCollectionLeaves');
+
+        $menu.append('<li class="recommended"><a href="#">РЕКОМЕНДУЕМ</a></li>');
+        $menu.find('> li').not('.all, .newseason, .oldseason, .recommended').wrapAll('<ul class="lvl-3 recommended">');
+        $('ul.recommended').appendTo($menu.find('> li.recommended'));
+    }
+
+    addMenuHeader();
+
+</script> <div id="aside-menu" class="aside-menu not-printable">
+<div id="aside-menu-right" rel="toplinks" class="aside-menu-right placeholder">
+</div>
+<div id="aside-menu-left-cart" class="no-content-loaded inl aside-menu-left-cart">
+<a class="aside-menu-link" id="aside-menu-left-cart-link" data-class="Mohito.Widget.ToolTip" data-options='{"content": "#aside-menu-left-cart-content", "keepAlive": true, "maxWidth": "280px"}' href="https://www.mohito.com/ru/ru/checkout/cart/">
+<i class="icon"></i>
+<p>Корзина</p>
+</a>
+<div id="aside-menu-left-cart-content" class="hidden dont-show">
+<h3 class="text medium-spacing">
+<span class="strong uppercase">Корзина:</span>&nbsp;&nbsp;<span class="small">Недавно добавленные товары:</span>
+</h3>
+<hr />
+<table cellspacing="0" cellpadding="0"></table>
+<hr />
+<div class="bottom">
+<div class="total-wrapper medium-spacing">
+<label class="small">сумма:</label>
+<span class="total text strong xxlarge"><span>0</span> RUB</span>
+</div>
+<div class="place-wrapper">
+<a href="https://www.mohito.com/ru/ru/checkout/cart/index/" class="button button-small">
+<strong>Оформить заказ</strong>
+</a>
+</div>
+<div class="info-wrapper medium-spacing">
+<p class="info small">
+<em>Бесплатная доставка от 2000 РУБ.</em>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="aside-menu-left-favourites" class="inl aside-menu-left-favourites" style="display: none;">
+<a class="aside-menu-link" href="https://www.mohito.com/ru/ru/wishlist/index/wide/" title="Избранное">
+<i class="icon"></i>
+<p>Избранное</p><span class="counter">0</span></a>
+</div> </div>
+</div>
+<div class="section">
+<div>
+<div class="content">
+<div><link rel="stylesheet" type="text/css" href="/media/SHARED/stronywizerunkowe/mohito/home/assets/style.css?ver=5e84939ebfb36">
+<div class="grid">
+<article class="slider">
+<ul id="mainSlider">
+<li class="hidden-slider-image  light-arrow">
+<a href="https://www.mohito.com/ru/ru/collection/sale-ru?place=home&brick=slider-1">
+<picture>
+<source media="(max-width: 768px)" srcset="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/20_off_MSS_31_03_2020/new_mobile_ru.jpg">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/20_off_MSS_31_03_2020/slider_ru.jpg" alt="-20% MSS SS20">
+</picture>
+</a>
+</li>
+<li class="hidden-slider-image  light-arrow">
+<a href="https://www.mohito.com/ru/ru/collection/sale-ru?place=home&brick=slider-2">
+<picture>
+<source media="(max-width: 768px)" srcset="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/do50_mss_ss20/mobile-50-ru.jpg">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/do50_mss_ss20/slider-50-ru.jpg" alt="Сезонная распродажа - Mohito">
+</picture>
+</a>
+</li>
+<li class="hidden-slider-image  light-arrow">
+ <a href="https://www.mohito.com/ru/ru/lookbook/celebration?place=home&brick=slider-3">
+<picture>
+<source media="(max-width: 768px)" srcset="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/celebration_ss20/mobile-ru.jpg">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/celebration_ss20/slider-ru.jpg" alt="Celebration">
+</picture>
+</a>
+</li>
+<li class="hidden-slider-image  light-arrow">
+<a href="https://www.mohito.com/ru/ru/collection/be-parisienne?place=home&brick=slider-4">
+<picture>
+<source media="(max-width: 768px)" srcset="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/be_parisienne_27_03_2020/slider_mobile_be_parisienne.jpg">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/be_parisienne_27_03_2020/slider_ru.jpg" alt="Be Parisienne">
+</picture>
+</a>
+</li>
+<li class="hidden-slider-image  light-arrow">
+<a href="https://www.mohito.com/ru/ru/stayathome?place=home&brick=slider-5">
+<picture>
+<source media="(max-width: 768px)" srcset="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/push_zamkniete_salony/mobile-info-ru-90-zamkniece.jpg">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/push_zamkniete_salony/slider-info-ru-90-zamkniecie.jpg" alt="Zamknięcie salonów">
+</picture>
+</a>
+</li>
+<li class="hidden-slider-image  light-arrow">
+<a href="https://www.mohito.com/ru/ru/newsletter?place=home&brick=slider-6">
+<picture>
+<source media="(max-width: 768px)" srcset="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/zapiska_NL_05_02_2020/mobile_ru.jpg">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/slider/zapiska_NL_05_02_2020/slider_ru.jpg" alt="Newsletter">
+</picture>
+</a>
+</li>
+</ul>
+</article>
+<span id="mobile-scroll-to"></span>
+<article class="product-row">
+<h2><a href="https://www.mohito.com/ru/ru/collection/new-aw?place=home&brick=new-0">Новинки</a></h2> <ul id="newCollectionSlider">
+<li>
+<a href="https://www.mohito.com/ru/ru/zz385-mlc/celebration-floral-dress?place=home&brick=new-1" title="Платье с цветочным узором Celebration">
+<div class="clip">
+<picture>
+<source data-srcset="
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/427/9df78eab33525d08d6e5fb8d27136e95/Z/Z/ZZ385-MLC-001.jpg,
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/853/9df78eab33525d08d6e5fb8d27136e95/Z/Z/ZZ385-MLC-001.jpg 2x">
+<img src="https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/427/9df78eab33525d08d6e5fb8d27136e95/Z/Z/ZZ385-MLC-001.jpg" alt="Платье с цветочным узором Celebration">
+</picture>
+<picture>
+<source data-srcset="
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/427/9df78eab33525d08d6e5fb8d27136e95/Z/Z/ZZ385-MLC-002.jpg,
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/853/9df78eab33525d08d6e5fb8d27136e95/Z/Z/ZZ385-MLC-002.jpg 2x">
+<img src="https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/427/9df78eab33525d08d6e5fb8d27136e95/Z/Z/ZZ385-MLC-002.jpg" alt="Платье с цветочным узором Celebration">
+</picture>
+</div>
+<figcaption>
+<p>платье</p>
+<aside>
+<span>3 999<small class="currency">RUB</small></span>
+</aside>
+</figcaption>
+</a>
+</li>
+<li>
+<a href="https://www.mohito.com/ru/ru/yk479-00x/celebration-flared-skirt?place=home&brick=new-1" title="Расклешенная юбка Celebration">
+<div class="clip">
+<picture>
+<source data-srcset="
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/427/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK479-00X-001.jpg,
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/853/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK479-00X-001.jpg 2x">
+<img src="https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/427/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK479-00X-001.jpg" alt="Расклешенная юбка Celebration">
+</picture>
+<picture>
+<source data-srcset="
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/427/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK479-00X-002.jpg,
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/853/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK479-00X-002.jpg 2x">
+<img src="https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/427/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK479-00X-002.jpg" alt="Расклешенная юбка Celebration">
+</picture>
+</div>
+<figcaption>
+<p>юбка</p>
+<aside>
+<span>2 999<small class="currency">RUB</small></span>
+</aside>
+</figcaption>
+</a>
+</li>
+<li>
+<a href="https://www.mohito.com/ru/ru/yl025-39x/celebration-viscose-blend-jumpsuit?place=home&brick=new-1" title="Комбинезон Celebration из ткани с вискозой">
+<div class="clip">
+<picture>
+<source data-srcset="
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/427/9df78eab33525d08d6e5fb8d27136e95/Y/L/YL025-39X-001.jpg,
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/853/9df78eab33525d08d6e5fb8d27136e95/Y/L/YL025-39X-001.jpg 2x">
+<img src="https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/427/9df78eab33525d08d6e5fb8d27136e95/Y/L/YL025-39X-001.jpg" alt="Комбинезон Celebration из ткани с вискозой">
+</picture>
+<picture>
+<source data-srcset="
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/427/9df78eab33525d08d6e5fb8d27136e95/Y/L/YL025-39X-002.jpg,
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/853/9df78eab33525d08d6e5fb8d27136e95/Y/L/YL025-39X-002.jpg 2x">
+<img src="https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/427/9df78eab33525d08d6e5fb8d27136e95/Y/L/YL025-39X-002.jpg" alt="Комбинезон Celebration из ткани с вискозой">
+</picture>
+</div>
+<figcaption>
+<p>комбинезон</p>
+<aside>
+<span>3 499<small class="currency">RUB</small></span>
+</aside>
+</figcaption>
+</a>
+</li>
+<li>
+<a href="https://www.mohito.com/ru/ru/yk475-01x/celebration-single-breasted-blazer?place=home&brick=new-1" title="Однобортный блейзер Celebration ">
+<div class="clip">
+<picture>
+<source data-srcset="
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/427/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK475-01X-001.jpg,
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/853/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK475-01X-001.jpg 2x">
+<img src="https://www.mohito.com/ru/ru/media/catalog/product/cache/thumbnail/427/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK475-01X-001.jpg" alt="Однобортный блейзер Celebration ">
+</picture>
+<picture>
+<source data-srcset="
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/427/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK475-01X-002.jpg,
+                                        https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/853/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK475-01X-002.jpg 2x">
+<img src="https://www.mohito.com/ru/ru/media/catalog/product/cache/back_image/427/9df78eab33525d08d6e5fb8d27136e95/Y/K/YK475-01X-002.jpg" alt="Однобортный блейзер Celebration ">
+</picture>
+</div>
+<figcaption>
+<p>blazer</p>
+<aside>
+<span>3 999<small class="currency">RUB</small></span>
+</aside>
+</figcaption>
+</a>
+</li>
+</ul>
+</article>
+<article class="slider-gi" id="getinspired">
+<h2 class="get-inspired"><a href="lookbook/celebration?place=home&brick=gi-0">Get Inspired</a></h2>
+<ul id="getInspired">
+<li class="hidden-slider-image">
+<a href="https://www.mohito.com/ru/ru/lookbook/celebration?place=home&brick=gi-1">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get_inspired_celebration_ss20.jpg" alt="Celebration">
+</a>
+</li>
+<li class="hidden-slider-image">
+<a href="https://www.mohito.com/ru/ru/collection/be-parisienne?place=home&brick=gi-2">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get_inspired_be_parisienne.jpg" alt="Be Parisienne">
+</a>
+ </li>
+<li class="hidden-slider-image">
+<a href="https://www.mohito.com/ru/ru/collection/aquatic-fantasy?place=home&brick=gi-3">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get-inspired-aquatic-fantasy.jpg" alt="Aquatic Fantasy">
+</a>
+</li>
+<li class="hidden-slider-image">
+<a href="https://www.mohito.com/ru/ru/lookbook/spring-essentials?place=home&brick=gi-4">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get-inspired-spring-essentials.jpg" alt="Spring Essentials">
+</a>
+</li>
+<li class="hidden-slider-image">
+<a href="https://www.mohito.com/ru/ru/lookbook/rock-and-dots?place=home&brick=gi-5">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get-inspired-rockanddots.jpg" alt="Rock and Dots">
+</a>
+</li>
+<li class="hidden-slider-image">
+<a href="https://www.mohito.com/ru/ru/ss20-mo-eco-aware?place=home&brick=gi-6">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/get-inspired/get-inspired-ecoaware-ss20.jpg" alt="Eco Aware">
+</a>
+</li>
+</ul>
+</article>
+<link rel="stylesheet" type="text/css" href="/media/SHARED/stronywizerunkowe/mohito/home/newsletter/assets/newsletter-home.css?ver=5e84939eca208">
+<article class="newsletter-row">
+<div class="mobile-only">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/newsletter/img/discount.jpg" alt="Подпишитесь на рассылку">
+</div>
+<h2 class="newsletter-title flex-a">
+<div><span data-title="ОСТАЛСЯ ОДИН ШАГ">Подпишитесь на рассылку</span><small data-subtitle="ПОДТВЕРДИТЕ ПОДПИСКУ!">и получите скидку -10% на покупку в интернет-магазине!</small></div>
+</h2>
+<div class="flex-b">
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/newsletter/img/discount.jpg" alt="Подпишитесь на рассылку">
+</div>
+<div id="spinner" class="spinner">
+<h3 class="info-header"> Отправка, пожалуйста подождите </h3>
+<div class="sk-cube-grid">
+<div class="sk-cube"></div>
+<div class="sk-cube"></div>
+<div class="sk-cube"></div>
+<div class="sk-cube"></div>
+<div class="sk-cube"></div>
+<div class="sk-cube"></div>
+<div class="sk-cube"></div>
+<div class="sk-cube"></div>
+<div class="sk-cube"></div>
+</div>
+</div>
+<form class="flex-c" id="homePageNewsletter" action="https://www.mohito.com/ru/ru/ajx/newsletter/subscribe/">
+<div class="newsletter-form-wrapper">
+<div class="inputs">
+<input type="email" class="newsletter-email ai-trigger-newsletter-email" name="email" id="email" placeholder="Введите адрес электронной почты">
+<button type="submit" class="newsletter-submit">&rarr;</button>
+</div>
+<div class="terms">
+<input type="checkbox" name="newsletter-terms" class="newsletter-terms ai-trigger-newsletter-terms" id="newsletterTerms">
+<label class="newsletter-terms-label" for="newsletterTerms">
+Принимаю <a href="https://www.mohito.com/ru/ru/newsletter-terms/" target="_blank">условия рассылки</a>
+</label>
+</div>
+<input type="hidden" name="subscriptionPlace" id="subscriptionPlace" value="home-page">
+</div>
+<div class="confirmation-text">
+Проверьте указанную Вами электронную почту и нажмите на ссылку, чтобы подтвердить подписку </div>
+</form>
+</article>
+<script src="/media/SHARED/stronywizerunkowe/mohito/home/newsletter/assets/newsletter-home.js"></script>
+<article class="social-row">
+<figure class="social_header">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/instagram_header.png" alt="Instagram image">
+</picture>
+</figure>
+<figure>
+<ul id="instagramSlider">
+<li class="hidden-slider-image">
+<a href="https://www.instagram.com/mohitofashion/?baner=11&place=home" title="mohitofashion">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/instagram/insta_SS1_5_02_2020.jpg">
+</picture>
+</a>
+</li>
+<li class="hidden-slider-image">
+<a href="https://www.instagram.com/mohitofashion/?baner=12&place=home" title="mohitofashion">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/instagram/insta_SS2_5_02_2020.jpg">
+</picture>
+</a>
+</li>
+ <li class="hidden-slider-image">
+<a href="https://www.instagram.com/mohitofashion/?baner=13&place=home" title="mohitofashion">
+<picture>
+<img src="/media/SHARED/stronywizerunkowe/mohito/home/img/instagram/insta_SS3_5_02_2020.jpg">
+</picture>
+</a>
+</li>
+</ul>
+</figure>
+</article>
+</div>
+<div class="header-cnt"><h1>Mohito Shop Online</h1></div>
+<script src="/media/SHARED/stronywizerunkowe/mohito/home/assets/main.js?ver=5e84939eca2a7"></script>
+<script src="/media/SHARED/stronywizerunkowe/mohito/home/assets/lazysizes.min.js"></script></div></div> </div>
+</div>
+</div>
+<footer id="footer" class="footer">
+<div class="footer-menu">
+<div class="footer-container">
+<div class="footer-contact" data-static="mo-footer-contact">
+<div class="contact-category">
+<h3 class="contact-category-title">Горячая линия</h3>
+<h5 class="contact-number"><a href="tel:8 800 500 24 67">8 800 500 24 67</a></h5>
+<p class="contact-category-description">Будни: 8:30-17:30 (Московское время)</p>
+</div>
+<div class="contact-category contact-form" style="order: 1;">
+<h3 class="contact-category-title">Контактная форма</h3>
+<a class="footer-button" href="https://www.mohito.com/ru/ru/contacts">Свяжитесь с нами</a></div>
+<div class="contact-category">&nbsp;</div>
+<div class="footer-social" data-static="mo-footer-social">
+<h3 class="social-title">Social media</h3>
+<ul>
+<li class="vkontakt"><a href="https://vk.com/mymohito" target="_blank">VK</a></li>
+<li class="youtube"><a href="https://www.youtube.com/user/mohitofashion" target="_blank">YouTube</a></li>
+<li class="instagram"><a href="https://www.instagram.com/mohitofashion/" target="_blank">Instagram</a></li>
+<li class="pinterest"><a href="https://pl.pinterest.com/mohitofashion/" target="_blank">Pinterest</a></li>
+</ul> </div>
+</div>
+<div class="footer-links">
+<ul class="accordion">
+<div data-static="mo-footer-links">
+<ul>
+<li class="accordion-cat">
+<h4 class="accordion-cat-title">Интернет-магазин</h4>
+<ul class="accordion-cat-content">
+<li><a href="https://www.mohito.com/ru/ru/how-to-buy">Как оформить заказ</a></li>
+<li><a title="https://www.mohito.com/ru/ru/faq" href="faq">Вопросы-Ответы</a></li>
+<li><a href="https://www.mohito.com/ru/ru/payments">Оплата</a></li>
+<li><a href="https://www.mohito.com/ru/ru/shipping">Доставка</a></li>
+<li><a href="https://www.mohito.com/ru/ru/returns">Возврат</a></li>
+<li><a href="https://www.mohito.com/ru/ru/claims">Претензии</a></li>
+<li><a href="https://www.mohito.com/ru/ru/size-guide">Таблица размеров</a></li>
+<li><a href="https://www.mohito.com/ru/ru/terms">Условия и положения</a></li>
+<li><a href="https://www.mohito.com/ru/ru/agreement">Соглашение между покупателем<br /> и продавцом</a></li>
+<li><a href="https://www.mohito.com/ru/ru/privacy-policy">Политика конфиденциальности</a></li>
+<li><a href="https://www.mohito.com/ru/ru/privacy-policy-cookies">Политика конфиденциальности - cookies</a></li>
+<li><a href="https://www.mohito.com/ru/ru/newsletter-terms">Условия рассылки</a></li>
+<li><a href="https://www.mohito.com/ru/ru/no-fur">Коллекции Mohito без натурального меха!</a></li>
+</ul>
+</li>
+<li class="accordion-cat">
+<h4 class="accordion-cat-title">Магазины</h4>
+<ul class="accordion-cat-content">
+<li><a class="footer-button" title="Хранить локатор" href="https://www.mohito.com/ru/ru/storelocator">Найти магазин</a></li>
+<li><a title="Цены в магазинах" href="https://www.mohito.com/ru/ru/price-tags">Цены в магазинах</a></li>
+</ul>
+</li>
+<li class="accordion-cat">
+<h4 class="accordion-cat-title">Мой аккаунт</h4>
+<ul class="accordion-cat-content">
+<li><a title="Заказы" href="https://www.mohito.com/ru/ru/sales/order/history/">Заказы</a></li>
+<li><a title="Настройки аккаунта" href="https://www.mohito.com/ru/ru/customer/account/edit/">Настройки аккаунта</a></li>
+<li><a title="Смена пароля" href="https://www.mohito.com/ru/ru/customer/account/edit/">Смена пароля</a></li>
+</ul>
+</li>
+<li class="accordion-cat brand-cat">
+<h4 class="accordion-cat-title">Mohito</h4>
+<ul class="accordion-cat-content">
+<li><a title="Kарьера" href="http://www.lppsa.com/career?lang=ru">Kарьера</a></li>
+<li><a title="Pressroom" href="http://www.lppsa.com/for-the-media?lang=en">СМИ</a></li>
+</ul>
+</li>
+</ul> </div>
+<li class="accordion-cat">
+<h4 class="accordion-cat-title">Новости</h4>
+<div class="accordion-cat-content">
+<div class="footer-newsletter">
+
+ <a href="https://www.mohito.com/ru/ru/newsletter/" class="footer-button newsletter">Подписаться на рассылку</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-bottom-bar">
+<div class="footer-container">
+<div class="footer-address" data-static="footer-address">
+<p>ООО &laquo;РЕ Трэйдинг&raquo;, Шлюзовая набережная 4, 115114 Москва, Россия, ИНН&nbsp;7725776121&nbsp;Адрес для возврата:&nbsp;143407 Московская обл; г. Красногорск, Строителей б-р д.1 , А/Я 341</p> </div>
+<div class="footer-copyrights" data-static="footer-copyright">
+<p>Mohito &copy; 2019&nbsp;Все права защищены</p> </div>
+</div>
+</div>
+</footer>
+<div class="rodo-popup-overlay" id="rodoPopupOverlay">
+<div class="rodo-popup" id="rodoPopup">
+<div class="rodo-popup-wrapper">
+<div class="close-button"></div>
+<div class="rodo-image"><img src="https://www.mohito.com/ru/ru/skin/frontend/mohito/default/img/rodo-image.png" alt=""></div>
+<div class="rodo-header">Your personal data<div>is safe with us</div></div>
+<div class="rodo-policy-content" id="rodoPolicyContent" data-static="rodo_policy_content">
+</div>
+<button class="rodo-submit" id="rodoSubmit" type="button" data-url="https://www.mohito.com/ru/ru/ajx/customer/acceptPrivacy/">I have read the above</button>
+</div>
+</div>
+</div>
+<script type="text/javascript">// <![CDATA[
+
+//embed
+
+(function(d){var r=d.getElementsByTagName('script')[1];s=d.createElement('script');s.async=true;s.src='/special/manager.js?9';r.parentNode.insertBefore(s,r);
+
+})(document)
+
+// ]]></script> <div id="fb-root"></div>
+<script type="text/javascript">
+        //<![CDATA[
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId : "1188125444577111",
+                channelUrl : 'https://www.mohito.com/ru/ru/fb/channel/index/locale/en_US/',
+                status : true,
+                cookie : true,
+                oauth : true,
+                xfbml : true
+            });
+        };
+		
+		
+        (function(d){
+            var js, id = 'facebook-jssdk'; if(d.getElementById(id)) { return; }
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+            d.getElementsByTagName('head')[0].appendChild(js);
+        }(document));
+
+        //]]>
+    </script>
+<div class="newsletter-popup" id="newsletter-popup" data-static="newsletter-mo">
+<p> </p> </div>
+<script>
+        LPP.isNewsletterPopupTriggered = false;
+        document.addEventListener('DOMContentLoaded', function() {
+            var triggers = document.querySelectorAll('.newsletter-popup-trigger'),
+                index,
+                newsletterPopupClose = document.getElementsByClassName('close-newsletter-popup')[0],
+                newsletterPopup = document.getElementById('newsletter-popup');
+            for (index = 0; index < triggers.length; index++) {
+                triggers[index].addEventListener('click', function(event) {
+                    event.preventDefault();
+                    newsletterPopup.style.display = 'block';
+                }, false);
+            }
+            newsletterPopupClose && newsletterPopupClose.addEventListener('click', function() {
+                newsletterPopup.style.display = 'none';
+            }, false);
+        }, false);
+    </script>
+<script type="text/javascript">
+    var varnish = {
+        'data': {
+            'url': 'https://www.mohito.com/ru/ru/varnish/ajax/index/',
+            'cookie': 'CART_CHANGED_V',
+            'product': ''
+        },
+        'isReady': false
+    };
+    var customerHtml = '<div id="aside-menu-right-search" class="aside-menu-right-search">'
+        + '<a class="aside-menu-link" href="#" title="Найти">'
+        +    '<i class="icon"></i>'
+        +    '<p>Найти</p>'
+        + '</a>'
+        + '<form action="https://www.mohito.com/ru/ru/catalogsearch/result/" method="get" enctype="application/x-www-form-urlencoded">'
+        +    '<input id="searchField" type="text" name="q" value="" maxlength="128" class="input-text alt" placeholder="Что вы ищете?">'
+        +        '<button class="aside-menu-link" id="search-submit">'
+        +           '<i class="search-submit-icon"></i>'
+        +        '</button>'
+        + '</form></div>'
+                + '<div id="aside-menu-right-login" class="inl aside-menu-right-login">'
+        + '   <a class="aside-menu-link" href="https://www.mohito.com/ru/ru/customer/account/login/uenc/aHR0cHM6Ly93d3cubW9oaXRvLmNvbS9ydS9ydS8,/" '
+        + 'title="">'
+        + '<i class="icon"></i>'
+        + '<p>Войти</p></a>'
+        + '</div>'
+                + '';
+                var favouritesHtml = '';
+        ;
+
+        var cartHtml = '<div id="aside-menu-left-cart" class="no-content-loaded inl aside-menu-left-cart">'
+            + '   <a class="aside-menu-link" id="aside-menu-left-cart-link" data-class="Mohito.Widget.ToolTip" '
+            + 'data-options=\'{"content": "#aside-menu-left-cart-content", "keepAlive": true, "maxWidth": "280px"}\' '
+            + 'href="https://www.mohito.com/ru/ru/checkout/cart/" title="Моя корзина">'
+            + '<i class="icon"></i>'
+            + '<p>Моя корзина</p><span class="counter">0</span></a>'
+            + '<div id="aside-menu-left-cart-content" class="hidden dont-show">'
+            + '<h3 class="text medium-spacing">'
+            + '<span class="strong uppercase">Корзина:</span>&nbsp;&nbsp;'
+            + '<span class="small">Недавно добавленные товары:</span>'
+            + '</h3><hr/><table cellspacing="0" cellpadding="0"></table><hr/>'
+            + '<div class="bottom"><div class="total-wrapper medium-spacing"><label class="small">сумма:</label>'
+            + '    <span class="total text strong xxlarge"><span>0,00</span> RUB'
+            + '</span></div>'
+            + '<div class="place-wrapper">'
+            + '    <a href="https://www.mohito.com/ru/ru/checkout/cart/index/" class="button button-small">'
+            + '        <strong>Оформить заказ</strong>'
+            + '    </a>'
+            + '</div>'
+            + '<div class="info-wrapper medium-spacing">'
+            + '    <p class="info small">'
+            + '        <em>Бесплатная доставка от 2000 РУБ.</em>'
+            + '    </p>'
+            + '</div></div></div></div>';
+
+
+        
+        var shareLink = '';
+    var shareForm = '';
+    </script>
+<script type="text/javascript">
+    jQuery('document').ready(function () {
+        setTimeout(function () {
+            new Analytics('https://www.mohito.com/ru/ru/ajx/ga/');
+        }, 2000);
+    });
+</script>
+<div id="quickshop-container" class="hidden">
+<div id="quickshop">
+<h2 class="quickcart-header">Быстро в корзину</h2>
+<div class="product-images">
+<div></div>
+</div>
+<form class="product-form" id="quickshop-form">
+<h2 class="product-name"></h2>
+<div class="product-manufacturer-code"></div>
+<div class="product-prices">
+<span class="price one-price"><span class="amount"></span> RUB</span>
+<span class="price old-price"><span class="amount"></span> RUB</span>
+<span class="price new-price"><span class="price"><span class="amount"></span> RUB</span></span>
+</div>
+<dl class="hidden-labels">
+<dt class="product-sizes"><span>Размер</span></dt>
+<dd class="product-sizes"></dd>
+<dt class="product-colors">Цвет</dt>
+<dd class="product-colors"></dd>
+</dl>
+<div class="product-checkout">
+<div class="checkout-add-to-cart">
+<p class="uppercase"> </p>
+<div class="qs-product-add-to-cart-tooltip" title="Прежде чем добавить товар в корзину, пожалуйста, выберите его размер">
+<button class="button-disabled button button-big product-add-to-cart">Добавить в корзину</button>
+</div>
+</div>
+<div class="qs-product-commingsoon-tooltip" title="Пожалуйста,выберите размер">
+<button class="button-disabled button button-big product-commingsoon">Уведомить о наличии</button>
+</div>
+</div>
+<ul class="product-actions">
+<li>
+<div class="qs-product-add-to-wishlist-tooltip" title="Прежде чем добавить в избранное, пожалуйста, выберите размер">
+<a disabled="disabled" class="add-to-wishlist pqs-add-to-wishlist uppercase text" href="#"><i class="icon medium heart"></i>ДОБАВИТЬ В ИЗБРАННОЕ<i class="icon small arrow-right"></i></a>
+</div>
+</li>
+</ul>
+<input type="hidden" name="product_id" value="">
+<input type="hidden" name="is_coming" value="">
+</form>
+<div class="hidden image-template">
+<a href="#" class="product-image">
+<img src="https://www.mohito.com/ru/ru/skin/frontend/mohito/default/img/blank.gif" alt="" class="qs-product-link" />
+</a>
+<div class="clear"></div>
+</div>
+</div>
+</div><div id="find-order" class="hidden">
+<div class="title">
+<h2>Поиск заказа</h2>
+</div>
+<form action="https://www.mohito.com/ru/ru/ajx/search/search/" method="post" data-class="Mohito.Layout.findOrderForm">
+<input type="hidden" name="uenc" value="aHR0cHM6Ly93d3cubW9oaXRvLmNvbS9ydS9ydS8,">
+<div class="input-row">
+<div class="label">
+<label for="find-order-id">Hомер заказа <span class="required">*</span></label>
+</div>
+<div class="input-field">
+<input type="text" class="input-text medium" id="find-order-id" name="number" data-class="Mohito.Widget.InputText" data-rules='{"required": true, "number": true}' />
+</div>
+</div>
+<div class="input-row">
+<div class="label">
+<label for="find-order-email">Адрес электронной почты <span class="required">*</span></label>
+</div>
+<div class="input-field">
+<input type="text" class="input-text medium" id="find-order-email" name="email" data-class="Mohito.Widget.InputText" data-rules='{"required": true, "real_email": true}' />
+</div>
+</div>
+<div class="input-row">
+<div class="label">
+<label for="find-order-surname">Фамилия <span class="required">*</span></label>
+</div>
+<div class="input-field">
+<input type="text" class="input-text medium" id="find-order-surname" name="lastname" data-class="Mohito.Widget.InputText" data-rules='{"required": true}' />
+</div>
+</div>
+<div class="input-row">
+<div class="input-field">
+<button type="submit" class="button button-small" id="loading-button" name="order-search-submit" data-class="Mohito.Widget.LoadingButton">Найти</button>
+</div>
+</div>
+
+</form>
+</div>
+<div id="fb-root"></div>
+<script type="text/javascript">
+        //<![CDATA[
+              
+        function fbFeed() {
+            var obj = {
+                method: 'feed',
+                link: 'https://www.mohito.com/ru/ru/',
+                picture: '',
+                name: 'Name',
+                caption: 'https://www.mohito.com/ru/ru/',
+                description: ''
+            };
+
+            function callback(response) {
+               
+            }
+
+            FB.ui(obj, callback);
+        }
+        
+        //]]>
+    </script>
+<div class="placeholder product_view_share" rel="product_view_share" id="product_view_share">
+</div>
+<div style="display: none">
+<div class="placeholder" rel="social_mail_share" id="product-share-email">
+</div>
+</div>
+<script type="text/javascript">
+    document.getElementsByTagName('body')[0].className += ' js-enabled';
+</script>
+<div class="scroll-down">
+<div class="left-part-of-arrow"></div>
+<div class="right-part-of-arrow"></div>
+</div>
+<script>
+    (function () {
+        try {
+            if (window.LegacyBridge) {
+                window.LegacyBridge.loadMinicart();
+            }
+        } catch (e) {
+            console.error(e);
+        }
+    })();
+</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cabb5a154f","applicationID":"419670997","transactionName":"NQYDYhNQXURQWxZaWAxMIFUVWFxZHlsPQBgLDQVTGR5aWVVdGg==","queueTime":0,"applicationTime":269,"atts":"GUEAFFtKTko=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
